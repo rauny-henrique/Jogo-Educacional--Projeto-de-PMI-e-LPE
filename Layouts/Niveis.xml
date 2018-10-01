@@ -273,7 +273,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Modal_Background" sid="882945279480269">
+        <layer name="Backdrop" sid="882945279480269">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>

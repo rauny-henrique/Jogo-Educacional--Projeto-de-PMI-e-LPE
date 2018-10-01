@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>#Pausa</name>
+    <events>
+        <event-group description="" sid="621501835802846" title="Menu Pausa">
+            <sub-events>
+                <event-block sid="113309430896792">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="890714704264717" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">BtnUI</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="250274340420542" type="Function">
+                            <param id="0" name="Name">&quot;menuPause&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="974063641668722">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="751087596807954" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_continue</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="235835564083123" type="Function">
+                            <param id="0" name="Name">&quot;menuPause&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="816170216076768">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="792439663599146" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_reload</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="655861187051396" type="System" />
+                        <action id="-13" name="Set time scale" sid="416795870651954" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="240675035198118" type="System">
+                            <param id="0" name="Variable">timescale_</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="588647173166458">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="983042367136383" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_menu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="413602201208911" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="128141930517850" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="256164339625404" type="System">
+                            <param id="0" name="Variable">timescale_</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="372508508453336">
+                    <conditions>
+                        <condition id="0" name="On function" sid="955047307041691" type="Function">
+                            <param id="0" name="Name">&quot;menuPause&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="244473170013440">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="564570601577408" type="System">
+                                    <param id="0" name="Variable">timescale_</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="539983219978349" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="862060104833822" type="System">
+                                    <param id="0" name="Variable">timescale_</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="218733397869968" type="Modal">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="958750630047707" type="Modal">
+                                    <param id="0" name="X">WindowWidth/4</param>
+                                    <param id="1" name="Y">WindowHeight/4</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="560931511826837" type="BtnModalPause">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="123400750780751" type="BtnUI">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="571209749449960" type="bg_ui">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="538430550407498" type="bg_ui">
+                                    <param id="0" name="Opacity">75</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="845147053976054" type="bg_ui">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                    <param id="1" name="Height">LayoutHeight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="496224978292299">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="790975062270287" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="113726657858390" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="290966139238224" type="System">
+                                    <param id="0" name="Variable">timescale_</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="129480676532925" type="Modal">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="255442896866703" type="BtnModalPause">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="168583069395283" type="BtnUI">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="423742164086940" type="bg_ui">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="248803048563164" type="bg_ui">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="756053495488539" type="bg_ui">
+                                    <param id="0" name="Width">0</param>
+                                    <param id="1" name="Height">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

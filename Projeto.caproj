@@ -402,6 +402,52 @@
             </object-type>
         </object-folder>
         <object-folder name="UI">
+            <object-folder name="Pausa">
+                <object-type name="modal_pausa" sid="343525696176238">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>modal_pausa</type>
+                        <type>btn_menu</type>
+                        <type>btn_reload</type>
+                        <type>btn_continue</type>
+                    </container>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="144039408057315" speed="5">
+                            <frame duration="1" hotspotX="0.50064" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\images\pausa_bg.png">
+                                <collision-poly>
+                                    <point x="0.0806658" y="0.177966" />
+                                    <point x="0.49936" y="0.00282486" />
+                                    <point x="0.916773" y="0.183616" />
+                                    <point x="0.99872" y="0.5" />
+                                    <point x="0.976953" y="0.949153" />
+                                    <point x="0.49936" y="0.983051" />
+                                    <point x="0.0230474" y="0.949153" />
+                                    <point x="0" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="btn_pause" sid="157542347173756">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="742076712656321" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="C:\Users\rauny\Desktop\images\btn_pause.png">
+                                <collision-poly>
+                                    <point x="0.160194" y="0.15493" />
+                                    <point x="0.5" y="0" />
+                                    <point x="0.839806" y="0.15493" />
+                                    <point x="0.980583" y="0.497653" />
+                                    <point x="0.834951" y="0.840376" />
+                                    <point x="0.5" y="0.953052" />
+                                    <point x="0.169903" y="0.835681" />
+                                    <point x="0.0194175" y="0.497653" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-type name="btn_voltar" sid="910206070282581">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -517,6 +563,12 @@
             </object-type>
             <object-type name="btn_continue" sid="818407056380550">
                 <plugin id="Sprite" />
+                <container>
+                    <type>modal_pausa</type>
+                    <type>btn_menu</type>
+                    <type>btn_reload</type>
+                    <type>btn_continue</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="209211011396093" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="C:\Users\rauny\Desktop\images\btn_continue.png">
@@ -536,6 +588,12 @@
             </object-type>
             <object-type name="btn_menu" sid="348973258875956">
                 <plugin id="Sprite" />
+                <container>
+                    <type>modal_pausa</type>
+                    <type>btn_menu</type>
+                    <type>btn_reload</type>
+                    <type>btn_continue</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="540574784153621" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="C:\Users\rauny\Desktop\images\btn_home.png">
@@ -555,6 +613,12 @@
             </object-type>
             <object-type name="btn_reload" sid="392881302140684">
                 <plugin id="Sprite" />
+                <container>
+                    <type>modal_pausa</type>
+                    <type>btn_menu</type>
+                    <type>btn_reload</type>
+                    <type>btn_continue</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="285794420121553" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="C:\Users\rauny\Desktop\images\btn_reload.png">
@@ -685,46 +749,6 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.509434" original-source="C:\Users\Lance\Desktop\front2.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.509434" original-source="C:\Users\Lance\Desktop\front3.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.509434" original-source="C:\Users\Lance\Desktop\front4.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-        </object-folder>
-        <object-folder name="HUD">
-            <object-type name="btn_pause" sid="157542347173756">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="742076712656321" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="C:\Users\rauny\Desktop\images\btn_pause.png">
-                            <collision-poly>
-                                <point x="0.160194" y="0.15493" />
-                                <point x="0.5" y="0" />
-                                <point x="0.839806" y="0.15493" />
-                                <point x="0.980583" y="0.497653" />
-                                <point x="0.834951" y="0.840376" />
-                                <point x="0.5" y="0.953052" />
-                                <point x="0.169903" y="0.835681" />
-                                <point x="0.0194175" y="0.497653" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="modal_pausa" sid="343525696176238">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="144039408057315" speed="5">
-                        <frame duration="1" hotspotX="0.50064" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\images\pausa_bg.png">
-                            <collision-poly>
-                                <point x="0.0806658" y="0.177966" />
-                                <point x="0.49936" y="0.00282486" />
-                                <point x="0.916773" y="0.183616" />
-                                <point x="0.99872" y="0.5" />
-                                <point x="0.976953" y="0.949153" />
-                                <point x="0.49936" y="0.983051" />
-                                <point x="0.0230474" y="0.949153" />
-                                <point x="0" y="0.5" />
-                            </collision-poly>
-                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -874,6 +898,106 @@
         <object-type name="ShadowLight" sid="426280215747729">
             <plugin id="shadowlight" />
         </object-type>
+        <object-type name="vida" sid="903192613871551">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="282910367387019" speed="5">
+                    <frame duration="1" hotspotX="0.502762" hotspotY="0.502924" original-source="C:\Users\rauny\Desktop\Imagens\vida_bg.png">
+                        <collision-poly>
+                            <point x="0.0939227" y="0.0994152" />
+                            <point x="0.497238" y="0.146199" />
+                            <point x="0.883978" y="0.122807" />
+                            <point x="0.933702" y="0.497076" />
+                            <point x="0.751381" y="0.736842" />
+                            <point x="0.497238" y="0.94152" />
+                            <point x="0.232044" y="0.754386" />
+                            <point x="0.0607735" y="0.497076" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="189215677647226">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="307714622925032" speed="5">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.505495" original-source="C:\Users\rauny\Desktop\Imagens\x.png">
+                        <collision-poly>
+                            <point x="0.103448" y="0.0989011" />
+                            <point x="0.494253" y="0.0989011" />
+                            <point x="0.931035" y="0.0659341" />
+                            <point x="0.724138" y="0.494505" />
+                            <point x="0.896552" y="0.901099" />
+                            <point x="0.494253" y="0.901099" />
+                            <point x="0.0689655" y="0.934066" />
+                            <point x="0.264368" y="0.494505" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="167155441593290">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="144060219426295" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\Imagens\3.png">
+                        <collision-poly>
+                            <point x="0.128205" y="0.0892857" />
+                            <point x="0.5" y="0" />
+                            <point x="0.858974" y="0.0982143" />
+                            <point x="0.948718" y="0.5" />
+                            <point x="0.846154" y="0.892857" />
+                            <point x="0.5" y="0.991071" />
+                            <point x="0.115385" y="0.919643" />
+                            <point x="0.179487" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.506173" hotspotY="0.504587" original-source="C:\Users\rauny\Desktop\Imagens\2.png">
+                        <collision-poly>
+                            <point x="0.123457" y="0.0917431" />
+                            <point x="0.493827" y="0" />
+                            <point x="0.851852" y="0.110092" />
+                            <point x="0.851852" y="0.495413" />
+                            <point x="0.876543" y="0.908257" />
+                            <point x="0.493827" y="0.990826" />
+                            <point x="0.0617284" y="0.954128" />
+                            <point x="0.320988" y="0.495413" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.510204" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\Imagens\1.png">
+                        <collision-poly>
+                            <point x="0.183673" y="0.0833333" />
+                            <point x="0.489796" y="0.037037" />
+                            <point x="0.918367" y="0.037037" />
+                            <point x="0.938776" y="0.5" />
+                            <point x="0.816327" y="0.916667" />
+                            <point x="0.489796" y="0.962963" />
+                            <point x="0.0816327" y="0.962963" />
+                            <point x="0.0612245" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="131121887032436">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="805779287836782" speed="5">
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504" original-source="C:\Users\rauny\Desktop\Imagens\interrogacao.png">
+                        <collision-poly>
+                            <point x="0.134831" y="0.096" />
+                            <point x="0.494382" y="0.008" />
+                            <point x="0.865169" y="0.096" />
+                            <point x="0.853933" y="0.496" />
+                            <point x="0.606742" y="0.72" />
+                            <point x="0.494382" y="0.992" />
+                            <point x="0.393258" y="0.72" />
+                            <point x="0.359551" y="0.496" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="BtnMenu" plugin-id="Sprite" sid="312552735332136">
@@ -986,6 +1110,12 @@
         <layout-folder name="Niveis">
             <layout>Level_1.xml</layout>
         </layout-folder>
+        <layout-folder name="UI">
+            <layout>Pausa.xml</layout>
+        </layout-folder>
+        <layout-folder name="HUD">
+            <layout>HUD.xml</layout>
+        </layout-folder>
     </layout-folder>
     <event-folder>
         <event-folder name="MenuPrincipal">
@@ -995,9 +1125,13 @@
         </event-folder>
         <event-folder name="UI">
             <event-sheet>#Voltar.xml</event-sheet>
+            <event-sheet>#Pausa.xml</event-sheet>
         </event-folder>
         <event-folder name="Niveis">
             <event-sheet>Level_1.xml</event-sheet>
+        </event-folder>
+        <event-folder name="HUD">
+            <event-sheet>#HUD.xml</event-sheet>
         </event-folder>
     </event-folder>
     <global-instances>
