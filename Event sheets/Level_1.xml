@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Level_1</name>
+    <events>
+        <variable constant="0" name="timescale_" sid="196170930951119" static="0" type="number">1</variable>
+        <event-group description="" sid="516477151197048" title="Menu Pausa">
+            <sub-events>
+                <event-block sid="382057705436121">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="415597576895969" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">BtnUI</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="734830786056831" type="Function">
+                            <param id="0" name="Name">&quot;menuPause&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="520320227777878">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="566171832619483" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_continue</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="269810959624560" type="Function">
+                            <param id="0" name="Name">&quot;menuPause&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="187321607758684">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="316331172295239" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_reload</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="930388843272321" type="System" />
+                        <action id="-13" name="Set time scale" sid="842284848618061" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="964707755484937" type="System">
+                            <param id="0" name="Variable">timescale_</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="833421719103563">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="785966334226483" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_menu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="367708419598397" type="System">
+                            <param id="0" name="Layout">Menu</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="277644218011795" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="116093647334489" type="System">
+                            <param id="0" name="Variable">timescale_</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="592737769897264">
+                    <conditions>
+                        <condition id="0" name="On function" sid="954720689235743" type="Function">
+                            <param id="0" name="Name">&quot;menuPause&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="151075731987074">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="696767782402927" type="System">
+                                    <param id="0" name="Variable">timescale_</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="293232234994137" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="316137264705954" type="System">
+                                    <param id="0" name="Variable">timescale_</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="382219931457470" type="Modal">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="134091563409798" type="BtnModalPause">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="805965899710151" type="bg_ui">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="897079184185575" type="bg_ui">
+                                    <param id="0" name="Opacity">75</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="454544531156009" type="bg_ui">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                    <param id="1" name="Height">LayoutHeight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="786493309556608">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="752269627793088" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="108753055050817" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="791423947179775" type="System">
+                                    <param id="0" name="Variable">timescale_</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="107072379466322" type="Modal">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="749365249211097" type="BtnModalPause">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="127970917385750" type="bg_ui">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="892211157187597" type="bg_ui">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="923339242732704" type="bg_ui">
+                                    <param id="0" name="Width">0</param>
+                                    <param id="1" name="Height">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="385134422753936" title="Chefe">
+            <sub-events>
+                <event-block sid="789414416369032">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="428973530855474" type="chefe" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="881967700494486" type="chefe">
+                            <param id="0" name="X">player.X</param>
+                            <param id="1" name="Y">player.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="383511862883956">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="390300626598568" type="chefe" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="341458007995816" type="chefe" />
+                    </actions>
+                </event-block>
+                <event-block sid="652050589509047">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="883980231837997" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="880664683917273" type="chefe">
+                            <param id="0" name="X">player.X</param>
+                            <param id="1" name="Y">player.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="641749767896641" title="Player">
+            <sub-events>
+                <event-block sid="913670314562249">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="333896157959715" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="257389402005943" type="player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="408883606502760">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="362786115204223" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="933511243102810" type="player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

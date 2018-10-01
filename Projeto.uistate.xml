@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Menu</layout>
+        <layout order="2">Niveis</layout>
+        <layout active="1" order="4">Level_1</layout>
+        <event-sheet order="1">Menu</event-sheet>
+        <event-sheet order="3">Niveis</event-sheet>
+        <event-sheet order="5">Level_1</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="1" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="0" name="BtnMenu" />
+        <family expanded="0" name="BtnUI" />
+        <family expanded="0" name="BtnNivel" />
+        <family expanded="0" name="Modal" />
+        <family expanded="0" name="BtnModalPause" />
+        <family expanded="0" name="BtnModule" />
+        <family expanded="0" name="ProgressBar" />
+        <family expanded="0" name="obstaculos" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/MenuPrincipal/" />
+        <folder expanded="0" path="object-folder/MenuPrincipal/instrucoes/" />
+        <folder expanded="0" path="object-folder/MenuPrincipal/niveis/" />
+        <folder expanded="0" path="object-folder/MenuPrincipal/modulos/" />
+        <folder expanded="1" path="object-folder/UI/" />
+        <folder expanded="0" path="object-folder/Jogo/" />
+        <folder expanded="0" path="object-folder/HUD/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="0" path="layout-folder/MenuPrincipal/" />
+        <folder expanded="1" path="layout-folder/Niveis/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="event-folder/MenuPrincipal/" />
+        <folder expanded="1" path="event-folder/UI/" />
+        <folder expanded="0" path="event-folder/Niveis/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/bg_instrucoes/" />
+        <folder expanded="1" path="animation-folder/direcionais/" />
+        <folder expanded="1" path="animation-folder/sp_mouse/" />
+        <folder expanded="1" path="animation-folder/bg_niveis/" />
+        <folder expanded="1" path="animation-folder/modal_modulos/" />
+        <folder expanded="1" path="animation-folder/nv_1/" />
+        <folder expanded="1" path="animation-folder/nv_2/" />
+        <folder expanded="1" path="animation-folder/nv_3/" />
+        <folder expanded="1" path="animation-folder/m_condicionais/" />
+        <folder expanded="1" path="animation-folder/m_op_logicos/" />
+        <folder expanded="1" path="animation-folder/m_tipos_basicos/" />
+        <folder expanded="1" path="animation-folder/btn_iniciar/" />
+        <folder expanded="1" path="animation-folder/btn_instrucoes/" />
+        <folder expanded="1" path="animation-folder/btn_voltar/" />
+        <folder expanded="1" path="animation-folder/btn_config/" />
+        <folder expanded="1" path="animation-folder/btn_modulos/" />
+        <folder expanded="1" path="animation-folder/btn_close/" />
+        <folder expanded="1" path="animation-folder/bg_ui/" />
+        <folder expanded="1" path="animation-folder/btn_continue/" />
+        <folder expanded="1" path="animation-folder/btn_menu/" />
+        <folder expanded="1" path="animation-folder/btn_reload/" />
+        <folder expanded="1" path="animation-folder/jarro/" />
+        <folder expanded="1" path="animation-folder/player/" />
+        <folder expanded="1" path="animation-folder/mesa/" />
+        <folder expanded="1" path="animation-folder/chefe/" />
+        <folder expanded="1" path="animation-folder/btn_pause/" />
+        <folder expanded="1" path="animation-folder/modal_pausa/" />
+        <folder expanded="1" path="animation-folder/progress_bar/" />
+        <folder expanded="1" path="animation-folder/progress_bg/" />
+        <folder expanded="1" path="animation-folder/progress_label/" />
+        <folder expanded="1" path="animation-folder/impressora/" />
+    </folders-expanded>
+</c2uistate>

@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Niveis</name>
+    <events>
+        <include>#Voltar</include>
+        <variable constant="0" name="Level" sid="796067780694138" static="0" type="number">1</variable>
+        <variable constant="0" name="Level_module_complete" sid="950463851763558" static="0" type="number">0</variable>
+        <variable constant="0" name="Step_progress" sid="536027483668492" static="0" type="number">89.423</variable>
+        <event-group description="" sid="386158553731853" title="On Layout Start">
+            <sub-events>
+                <event-block sid="169597832575907">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="313324958775325" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="868749309614376">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="347722117063152" type="System">
+                                    <param id="0" name="Object">BtnNivel</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="165580254031433">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="800567626580431" type="BtnNivel">
+                                            <param id="0" name="Instance variable">level</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">Level</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="499955227845996" type="BtnNivel">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="933497058408840">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="261777009683196" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="330199211343304" type="BtnNivel">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="205173790826185">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="730180824810205" type="System">
+                                    <param id="0" name="Object">BtnModule</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="656260957013031">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="484732143685804" type="BtnModule">
+                                            <param id="0" name="Instance variable">level</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">Level_module_complete</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="825774867679448" type="BtnModule">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="420372991192974">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="108171394993759" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="289330373215516" type="BtnModule">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="790953739984946">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="646593882440154" type="System">
+                                    <param id="0" name="Variable">Level_module_complete</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="123270458194526" type="progress_label">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="352044548509886" type="progress_bg">
+                                    <param id="0" name="Width">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="926447335526710">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="371501379041294" type="System">
+                                    <param id="0" name="Variable">Level_module_complete</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="970078856066241" type="progress_label">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="795690047094246" type="progress_bg">
+                                    <param id="0" name="Width">Step_progress</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="756383179084394">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="204614748196519" type="System">
+                                    <param id="0" name="Variable">Level_module_complete</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="156429885543501" type="progress_label">
+                                    <param id="0" name="Frame number">3</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="555151001081083" type="progress_bg">
+                                    <param id="0" name="Width">Step_progress*2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="656984099102217">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="861588655959321" type="System">
+                                    <param id="0" name="Variable">Level_module_complete</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="239173607467162" type="progress_label">
+                                    <param id="0" name="Frame number">4</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="301776958023302" type="progress_bg">
+                                    <param id="0" name="Width">Step_progress*3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="107610314700942" title="Mouse Over - BtnNivel">
+            <sub-events>
+                <event-block sid="494478052194583">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="282940179233607" type="System">
+                            <param id="0" name="Object">BtnNivel</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="914673210978111">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="722821898642551" type="Mouse">
+                                    <param id="0" name="Object">BtnNivel</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="873507871854251">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="623738718638002" type="BtnNivel">
+                                            <param id="0" name="Instance variable">level</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">Level</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="221935957227543">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="512541165959140" type="System">
+                                                    <param id="0" name="Variable">timescale_</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="9" name="Set scale" sid="323848631519747" type="BtnNivel">
+                                                    <param id="0" name="Scale">0.55</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="887780994130249">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="201101838305441" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="598643011011104" type="BtnNivel">
+                                    <param id="0" name="Scale">0.5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="899549218241498" title="Mouse OnClick - BtnNivel">
+            <sub-events>
+                <event-block sid="778263317990837">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="426532011825867" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">BtnNivel</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="349681728858904" type="BtnNivel">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="544728304767929">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="784757587527937" type="System">
+                                    <param id="0" name="Variable">timescale_</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="507080723304638" type="System">
+                                    <param id="0" name="Layout">str(&quot;Level_&quot;&amp;BtnNivel.level)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="426499136229348" title="Modal - Modulos">
+            <sub-events>
+                <event-block sid="739163585541909">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="803756167048790" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_modulos</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="848616655233410" type="modal_modulos">
+                            <param id="0" name="Instance variable">show</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Mostrar_LiteTween" id="10" name="Start" sid="323989216060366" type="modal_modulos">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="Mostrar_LiteTween" id="10" name="Start" sid="961455622447262" type="BtnModule">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="Mostrar_LiteTween" id="10" name="Start" sid="724530074192506" type="ProgressBar">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="898085526130087" type="modal_modulos">
+                            <param id="0" name="Instance variable">show</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="530307019272486" type="Function">
+                            <param id="0" name="Name">&quot;menuPause&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="858857876104650">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="426989732197926" type="modal_modulos">
+                            <param id="0" name="Instance variable">show</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="160729332673810" type="btn_close">
+                            <param id="0" name="Object">modal_modulos</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="434114446563595">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="601327110176367" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">btn_close</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Esconder_LiteTween" id="10" name="Start" sid="142632178965437" type="modal_modulos">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">1</param>
+                                </action>
+                                <action behavior="Esconder_LiteTween" id="10" name="Start" sid="625490423146197" type="BtnModule">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">1</param>
+                                </action>
+                                <action behavior="Esconder_LiteTween" id="10" name="Start" sid="622551264518732" type="ProgressBar">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="280153931439868" type="Function">
+                                    <param id="0" name="Name">&quot;menuPause&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="432967537649247">
+                    <conditions>
+                        <condition behavior="Esconder_LiteTween" id="4" name="On tween end" sid="547947492362815" type="modal_modulos" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="558819432109777" type="modal_modulos">
+                            <param id="0" name="Instance variable">show</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="477950566168369">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="217943201574180" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="152934489041039" type="LocalStorage">
+                    <param id="0" name="Key">&quot;level&quot;</param>
+                    <param id="1" name="Value">Level</param>
+                </action>
+                <action id="0" name="Set item" sid="418200558310347" type="LocalStorage">
+                    <param id="0" name="Key">&quot;level_module_complete&quot;</param>
+                    <param id="1" name="Value">Level_module_complete</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="426613957802581">
+            <conditions>
+                <condition id="0" name="On function" sid="110921955427218" type="Function">
+                    <param id="0" name="Name">&quot;menuPause&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="680994511890156">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="486146912114343" type="System">
+                            <param id="0" name="Variable">timescale_</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="389060171236271" type="System">
+                            <param id="0" name="Variable">timescale_</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="128685796809648" type="bg_ui">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="863272361441945" type="bg_ui">
+                            <param id="0" name="Opacity">75</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="117164326164893" type="bg_ui">
+                            <param id="0" name="Width">LayoutWidth</param>
+                            <param id="1" name="Height">LayoutHeight</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="990433547714272">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="779845411643765" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="661692704864554" type="System">
+                            <param id="0" name="Variable">timescale_</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="931098998925386" type="bg_ui">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="288025747954541" type="bg_ui">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="680199762032721" type="bg_ui">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

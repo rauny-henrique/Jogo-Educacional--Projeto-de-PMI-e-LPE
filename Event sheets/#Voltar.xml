@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>#Voltar</name>
+    <events>
+        <event-group description="" sid="805851816322059" title="OnClick - Voltar">
+            <sub-events>
+                <event-block any="1" sid="174549886995530">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="365715245554657" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">BtnUI</param>
+                        </condition>
+                        <condition id="17" name="On tap object" sid="625742317306415" type="Touch">
+                            <param id="0" name="Object">BtnUI</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="443391924483466">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="993399906389459" type="System">
+                                    <param id="0" name="Variable">timescale_</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="887166135011003">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="391382480682606" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="344134037667090" type="System">
+                                    <param id="0" name="Layout">Navegation.last_layout</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

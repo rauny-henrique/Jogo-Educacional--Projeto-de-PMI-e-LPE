@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu</name>
+    <events>
+        <variable constant="0" name="menu_selected" sid="846558758134518" static="0" type="number">0</variable>
+        <event-group description="" sid="126688381782392" title="Start of Layout">
+            <sub-events>
+                <event-block sid="975840622938451">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="485627761527301" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="162001393052458" type="LocalStorage">
+                            <param id="0" name="Key">&quot;level&quot;</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="272853720146266" type="LocalStorage">
+                            <param id="0" name="Key">&quot;level_module_complete&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="127616067922957">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="972271701734465" type="System">
+                                    <param id="0" name="Object">BtnMenu</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="147412094763407" type="BtnMenu">
+                                    <param id="0" name="Width">BtnMenu.W</param>
+                                    <param id="1" name="Height">BtnMenu.H</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="512384682852165">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="900803574876437" type="BtnMenu">
+                                            <param id="0" name="Instance variable">index</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="458279574836013" type="BtnMenu">
+                                            <param id="0" name="Scale">0.35</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="816926473772552" title="Mouse Over">
+            <sub-events>
+                <event-block sid="564599759909155">
+                    <conditions>
+                        <condition id="-10" name="For" sid="999601538175701" type="System">
+                            <param id="0" name="Name">&quot;item&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="889601325821084">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="428466662323923" type="Mouse">
+                                    <param id="0" name="Object">BtnMenu</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="491585485783692" type="BtnMenu">
+                                    <param id="0" name="Scale">0.35</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="328367486849992">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="529478799530189" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="248662542224324" type="BtnMenu">
+                                    <param id="0" name="Scale">0.3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="927668083076827" title="Mouse OnClick">
+            <sub-events>
+                <event-block any="1" sid="839084800277480">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="551629852650212" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">BtnMenu</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="860232578718290" type="Keyboard">
+                            <param id="0" name="Key">13 (Return)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="168862220570142" type="Navegation">
+                            <param id="0" name="Instance variable">last_layout</param>
+                            <param id="1" name="Value">LayoutName</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="233325029148472">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="632104124039814" type="BtnMenu">
+                                    <param id="0" name="Unique ID">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="502230769376878" type="System">
+                                    <param id="0" name="Layout">Niveis</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="625032138993169">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="339314807791876" type="BtnMenu">
+                                    <param id="0" name="Unique ID">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="442339808510846" type="System">
+                                    <param id="0" name="Layout">Instrucoes</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" disabled="1" sid="898468276466366" title="Keyboard">
+            <sub-events>
+                <event-block any="1" disabled="1" sid="231979639527691">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="751247886157526" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="785491221844887" type="System">
+                            <param id="0" name="Variable">menu_selected</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="458646714634927">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="881923817477210" type="System">
+                                    <param id="0" name="Variable">menu_selected</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="681817968996786" type="System">
+                                    <param id="0" name="Variable">menu_selected</param>
+                                    <param id="1" name="Value">BtnMenu(-1).index</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="580810643859959">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="434451298138643" type="Function">
+                                    <param id="0" name="Name">&quot;findBtnMenu&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="902069251980268">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="666374362686741" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="124814109699865" type="System">
+                            <param id="0" name="Variable">menu_selected</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="510367805374637">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="204562447513460" type="System">
+                                    <param id="0" name="Variable">menu_selected</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">BtnMenu(-1).index</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="424376821441060" type="System">
+                                    <param id="0" name="Variable">menu_selected</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="592252016004317">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="859506418447288" type="Function">
+                                    <param id="0" name="Name">&quot;findBtnMenu&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="639053037869739" title="Functions">
+            <sub-events>
+                <event-block sid="361144381115241">
+                    <conditions>
+                        <condition id="0" name="On function" sid="900320389623938" type="Function">
+                            <param id="0" name="Name">&quot;findBtnMenu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="881312384862893">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="460745361000823" type="System">
+                                    <param id="0" name="Object">BtnMenu</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="269270088874353">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="760033820772660" type="BtnMenu">
+                                            <param id="0" name="Instance variable">index</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">menu_selected</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="642272837909232" type="BtnMenu">
+                                            <param id="0" name="Scale">0.35</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="946884311390270">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="732481580671190" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="903171891596881" type="BtnMenu">
+                                            <param id="0" name="Scale">0.3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="609959830106657" title="Button - Config">
+            <sub-events>
+                <event-block sid="955125884154073">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="599339909378485" type="Mouse">
+                            <param id="0" name="Object">btn_config</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="400894099911521" type="btn_config">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="119843805105550">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="501595475612471" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="843402394925745" type="btn_config">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="888213123937129">
+            <conditions>
+                <condition id="9" name="On item exists" sid="706346543499704" type="LocalStorage">
+                    <param id="0" name="Key">&quot;level&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="315492898758086" type="LocalStorage">
+                    <param id="0" name="Key">&quot;level&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="139556383228655">
+            <conditions>
+                <condition id="1" name="On item get" sid="594771981113318" type="LocalStorage">
+                    <param id="0" name="Key">&quot;level&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="708884226417695" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Value">LocalStorage.itemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="818766625679968">
+            <conditions>
+                <condition id="9" name="On item exists" sid="376034839851306" type="LocalStorage">
+                    <param id="0" name="Key">&quot;level_module_complete&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="282925727632867" type="LocalStorage">
+                    <param id="0" name="Key">&quot;level_module_complete&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="403959297955408">
+            <conditions>
+                <condition id="1" name="On item get" sid="433782382616476" type="LocalStorage">
+                    <param id="0" name="Key">&quot;level_module_complete&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="248037172944956" type="System">
+                    <param id="0" name="Variable">Level_module_complete</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
