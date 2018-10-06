@@ -1,14 +1,24 @@
-# Jogo Educacional - Projeto para as disciplinas de PMI e LPE
+# Jogo Educacional - Projeto desenvolvido para as seguintes disciplinas:
+
+* Produção de Manterial Institucional
+* Linguagem de Programação para Educação
+* Software Eduacional
 
 ## Membros do grupo:
 
 * Rauny Henrique Bezerra
 * Luis Lancelote
-* Marcus
-* ...
+* Marcus Leite
 
-### Assuntos abordados:
+### Assuntos abordados: 
 
-* ...
-* ...
-* ...
+As fases do jogo estão definidas em modulos, com um nível de dificuldade crescente.
+
+## Modulos: 
+
+* Tipos básicos de variáveis
+* Operadores lógicos
+* Condicionais
+* Loops
+* Funções
+* Vetores
