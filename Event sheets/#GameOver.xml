@@ -3,6 +3,21 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>#GameOver</name>
     <events>
+        <event-block sid="628097801306008">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="748303652565266" type="gameover_bg" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="289790958349452" type="btn_menu">
+                    <param id="0" name="Object">gameover_bg</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="705291770640739" type="btn_reload">
+                    <param id="0" name="Object">gameover_bg</param>
+                    <param id="1" name="Image point (optional)">2</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="439405147765982">
             <conditions>
                 <condition id="6" name="On object clicked" sid="315259260071838" type="Mouse">
@@ -21,12 +36,6 @@
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="792634725470752" type="gameover_bg">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="708430100556694" type="btn_menu">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="971033460413026" type="btn_reload">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
@@ -51,12 +60,6 @@
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="570067706699276" type="gameover_bg">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="357177805241497" type="btn_menu">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="932461993301985" type="btn_reload">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>

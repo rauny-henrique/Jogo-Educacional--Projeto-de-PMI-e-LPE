@@ -5,12 +5,31 @@
     <events>
         <event-group description="" sid="621501835802846" title="Menu Pausa">
             <sub-events>
+                <event-block sid="178901973373914">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="839681431451613" type="modal_pausa" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="397573305065109" type="btn_continue">
+                            <param id="0" name="Object">modal_pausa</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="800241056319947" type="btn_reload">
+                            <param id="0" name="Object">modal_pausa</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="161572602178154" type="btn_menu">
+                            <param id="0" name="Object">modal_pausa</param>
+                            <param id="1" name="Image point (optional)">3</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="113309430896792">
                     <conditions>
                         <condition id="6" name="On object clicked" sid="890714704264717" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                             <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">BtnUI</param>
+                            <param id="2" name="Object clicked">btn_pause</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -99,15 +118,12 @@
                                     <param id="0" name="Variable">timescale_</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="218733397869968" type="Modal">
+                                <action id="-15" name="Set visible" sid="218733397869968" type="modal_pausa">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="958750630047707" type="Modal">
+                                <action id="-3" name="Set position" sid="958750630047707" type="modal_pausa">
                                     <param id="0" name="X">WindowWidth/4</param>
                                     <param id="1" name="Y">WindowHeight/4</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="560931511826837" type="BtnModalPause">
-                                    <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="123400750780751" type="BtnUI">
                                     <param id="0" name="Visibility">0</param>
@@ -121,6 +137,15 @@
                                 <action id="-7" name="Set size" sid="845147053976054" type="bg_ui">
                                     <param id="0" name="Width">LayoutWidth</param>
                                     <param id="1" name="Height">LayoutHeight</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="462474347935093" type="btn_continue">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="297761141967938" type="btn_reload">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="129227206737675" type="btn_menu">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -136,10 +161,7 @@
                                     <param id="0" name="Variable">timescale_</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="129480676532925" type="Modal">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="255442896866703" type="BtnModalPause">
+                                <action id="-15" name="Set visible" sid="129480676532925" type="modal_pausa">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="168583069395283" type="BtnUI">
@@ -154,6 +176,15 @@
                                 <action id="-7" name="Set size" sid="756053495488539" type="bg_ui">
                                     <param id="0" name="Width">0</param>
                                     <param id="1" name="Height">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="773185467456220" type="btn_continue">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="673260179170963" type="btn_reload">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="217480970095245" type="btn_menu">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
                         </event-block>

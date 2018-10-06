@@ -94,7 +94,7 @@
                 </instance>
                 <instance type="btn_continue" uid="73">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -102,8 +102,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>297</x>
-                        <y>257.272216797</y>
+                        <x>310.635559082</x>
+                        <y>-80.00050354</y>
                         <z>0</z>
                         <width>71</width>
                         <height>69</height>
@@ -116,7 +116,7 @@
                 </instance>
                 <instance type="btn_menu" uid="74">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -124,8 +124,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>549.000061035</x>
-                        <y>256</y>
+                        <x>562.635620117</x>
+                        <y>-81.272720337</y>
                         <z>0</z>
                         <width>71</width>
                         <height>69</height>
@@ -138,7 +138,7 @@
                 </instance>
                 <instance type="btn_reload" uid="75">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -146,8 +146,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>423</x>
-                        <y>256</y>
+                        <x>436.635559082</x>
+                        <y>-81.272720337</y>
                         <z>0</z>
                         <width>71</width>
                         <height>69</height>

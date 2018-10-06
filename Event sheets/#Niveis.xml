@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Niveis</name>
+    <name>#Niveis</name>
     <events>
         <include>#Voltar</include>
         <variable constant="0" name="Level" sid="796067780694138" static="0" type="number">1</variable>
@@ -340,21 +340,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="477950566168369">
-            <conditions>
-                <condition id="-3" name="On end of layout" sid="217943201574180" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set item" sid="152934489041039" type="LocalStorage">
-                    <param id="0" name="Key">&quot;level&quot;</param>
-                    <param id="1" name="Value">Level</param>
-                </action>
-                <action id="0" name="Set item" sid="418200558310347" type="LocalStorage">
-                    <param id="0" name="Key">&quot;level_module_complete&quot;</param>
-                    <param id="1" name="Value">Level_module_complete</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="426613957802581">
             <conditions>
                 <condition id="0" name="On function" sid="110921955427218" type="Function">
@@ -410,6 +395,21 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="477950566168369">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="217943201574180" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set item" sid="152934489041039" type="LocalStorage">
+                    <param id="0" name="Key">&quot;level&quot;</param>
+                    <param id="1" name="Value">Level</param>
+                </action>
+                <action id="0" name="Set item" sid="418200558310347" type="LocalStorage">
+                    <param id="0" name="Key">&quot;level_module_complete&quot;</param>
+                    <param id="1" name="Value">Level_module_complete</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

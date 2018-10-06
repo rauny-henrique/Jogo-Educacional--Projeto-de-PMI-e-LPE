@@ -2,7 +2,7 @@
 <c2layout>
     <name>Menu</name>
     <sid>495309629929886</sid>
-    <event-sheet>Menu</event-sheet>
+    <event-sheet>#Menu</event-sheet>
     <size>
         <width>854</width>
         <height>480</height>

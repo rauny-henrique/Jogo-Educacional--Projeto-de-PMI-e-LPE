@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Menu</name>
+    <name>#Menu</name>
     <events>
         <variable constant="0" name="menu_selected" sid="846558758134518" static="0" type="number">0</variable>
         <event-group description="" sid="126688381782392" title="Start of Layout">

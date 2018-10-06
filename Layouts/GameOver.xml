@@ -2,7 +2,7 @@
 <c2layout>
     <name>GameOver</name>
     <sid>811498506120751</sid>
-    <event-sheet>#GameOver</event-sheet>
+    <event-sheet></event-sheet>
     <size>
         <width>854</width>
         <height>480</height>
@@ -71,7 +71,7 @@
                 </instance>
                 <instance type="btn_menu" uid="78">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -79,8 +79,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>371.700744629</x>
-                        <y>335.173797607</y>
+                        <x>365.0887146</x>
+                        <y>-46.643981934</y>
                         <z>0</z>
                         <width>71</width>
                         <height>69</height>
@@ -93,7 +93,7 @@
                 </instance>
                 <instance type="btn_reload" uid="79">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -101,8 +101,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>488.388000488</x>
-                        <y>335.173797607</y>
+                        <x>514.833557129</x>
+                        <y>-50.776153564</y>
                         <z>0</z>
                         <width>71</width>
                         <height>69</height>

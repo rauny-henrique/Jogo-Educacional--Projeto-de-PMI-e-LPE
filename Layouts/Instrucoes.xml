@@ -2,7 +2,7 @@
 <c2layout>
     <name>Instrucoes</name>
     <sid>900727785640631</sid>
-    <event-sheet>Instrucoes</event-sheet>
+    <event-sheet>#Instrucoes</event-sheet>
     <size>
         <width>854</width>
         <height>480</height>

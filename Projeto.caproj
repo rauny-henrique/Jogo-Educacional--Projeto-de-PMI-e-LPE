@@ -405,15 +405,12 @@
             <object-folder name="Pausa">
                 <object-type name="modal_pausa" sid="343525696176238">
                     <plugin id="Sprite" />
-                    <container>
-                        <type>modal_pausa</type>
-                        <type>btn_menu</type>
-                        <type>btn_reload</type>
-                        <type>btn_continue</type>
-                    </container>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="144039408057315" speed="5">
                             <frame duration="1" hotspotX="0.50064" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\images\pausa_bg.png">
+                                <image-point name="continue" x="0.179257" y="0.59322" />
+                                <image-point name="reload" x="0.49936" y="0.59322" />
+                                <image-point name="menu" x="0.827145" y="0.59322" />
                                 <collision-poly>
                                     <point x="0.0806658" y="0.177966" />
                                     <point x="0.49936" y="0.00282486" />
@@ -563,12 +560,6 @@
             </object-type>
             <object-type name="btn_continue" sid="818407056380550">
                 <plugin id="Sprite" />
-                <container>
-                    <type>modal_pausa</type>
-                    <type>btn_menu</type>
-                    <type>btn_reload</type>
-                    <type>btn_continue</type>
-                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="209211011396093" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="C:\Users\rauny\Desktop\images\btn_continue.png">
@@ -588,12 +579,6 @@
             </object-type>
             <object-type name="btn_menu" sid="348973258875956">
                 <plugin id="Sprite" />
-                <container>
-                    <type>modal_pausa</type>
-                    <type>btn_menu</type>
-                    <type>btn_reload</type>
-                    <type>btn_continue</type>
-                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="540574784153621" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="C:\Users\rauny\Desktop\images\btn_home.png">
@@ -613,12 +598,6 @@
             </object-type>
             <object-type name="btn_reload" sid="392881302140684">
                 <plugin id="Sprite" />
-                <container>
-                    <type>modal_pausa</type>
-                    <type>btn_menu</type>
-                    <type>btn_reload</type>
-                    <type>btn_continue</type>
-                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="285794420121553" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="C:\Users\rauny\Desktop\images\btn_reload.png">
@@ -969,6 +948,8 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="562549792004948" speed="5">
                         <frame duration="1" hotspotX="0.500465" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\Imagens\gameover_bg.png">
+                            <image-point name="menu" x="0.31907" y="0.934702" />
+                            <image-point name="reload" x="0.674419" y="0.938433" />
                             <collision-poly>
                                 <point x="0.0334884" y="0.0671642" />
                                 <point x="0.499535" y="0.00746269" />
@@ -1130,16 +1111,16 @@
     </layout-folder>
     <event-folder>
         <event-folder name="MenuPrincipal">
-            <event-sheet>Menu.xml</event-sheet>
-            <event-sheet>Niveis.xml</event-sheet>
-            <event-sheet>Instrucoes.xml</event-sheet>
+            <event-sheet>#Menu.xml</event-sheet>
+            <event-sheet>#Niveis.xml</event-sheet>
+            <event-sheet>#Instrucoes.xml</event-sheet>
         </event-folder>
         <event-folder name="UI">
             <event-sheet>#Voltar.xml</event-sheet>
             <event-sheet>#Pausa.xml</event-sheet>
         </event-folder>
         <event-folder name="Niveis">
-            <event-sheet>Level_1.xml</event-sheet>
+            <event-sheet>#Level_1.xml</event-sheet>
         </event-folder>
         <event-folder name="HUD">
             <event-sheet>#HUD.xml</event-sheet>
