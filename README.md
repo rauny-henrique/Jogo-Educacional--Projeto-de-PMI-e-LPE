@@ -1,8 +1,8 @@
 # Jogo Educacional - Projeto desenvolvido para as seguintes disciplinas:
 
-* Produção de Manterial Institucional
+* Produção de Material Institucional
 * Linguagem de Programação para Educação
-* Software Eduacional
+* Software Educacional
 
 ## Membros do grupo:
 
