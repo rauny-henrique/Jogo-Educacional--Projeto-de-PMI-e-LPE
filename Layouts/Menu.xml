@@ -37,11 +37,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
-                        <y>0</y>
+                        <x>-377</x>
+                        <y>-495</y>
                         <z>0</z>
-                        <width>854</width>
-                        <height>480</height>
+                        <width>1303</width>
+                        <height>975</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -169,6 +169,11 @@
                                 <target-mode>Absolute</target-mode>
                                 <duration>0.5</duration>
                                 <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>

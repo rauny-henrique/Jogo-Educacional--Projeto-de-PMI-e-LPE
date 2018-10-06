@@ -4,7 +4,27 @@
     <name>Level_1</name>
     <events>
         <include>#Pausa</include>
+        <include>#HUD</include>
         <variable constant="0" name="timescale_" sid="196170930951119" static="0" type="number">1</variable>
+        <event-block sid="975589307875107">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="314245333633844" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="132898475329934" type="System">
+                    <param id="0" name="Variable">level_progress</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="764501412900490" type="System">
+                    <param id="0" name="Variable">max_level_progress</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="950792422130008" type="System">
+                    <param id="0" name="Variable">step_level_progress</param>
+                    <param id="1" name="Value">max_step_level_progress / max_level_progress</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="385134422753936" title="Chefe">
             <sub-events>
                 <event-block sid="789414416369032">

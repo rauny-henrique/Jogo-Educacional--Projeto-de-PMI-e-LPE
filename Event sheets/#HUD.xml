@@ -2,5 +2,97 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>#HUD</name>
-    <events />
+    <events>
+        <comment>Vida do player</comment>
+        <variable constant="0" name="vida" sid="161431073188376" static="0" type="number">3</variable>
+        <variable constant="0" name="step_life_progress" sid="472884302200372" static="0" type="number">32.8</variable>
+        <comment>Progresso do level</comment>
+        <comment>step_level_progress = max_step_level_progress / max_level_progress</comment>
+        <variable constant="0" name="level_progress" sid="350196806320091" static="0" type="number">0</variable>
+        <variable constant="0" name="max_level_progress" sid="657764689445665" static="0" type="number">0</variable>
+        <variable constant="0" name="step_level_progress" sid="514588541161114" static="0" type="number">0</variable>
+        <variable constant="0" name="max_step_level_progress" sid="910704493732811" static="0" type="number">333.56</variable>
+        <event-group description="" sid="206067186015662" title="Vida">
+            <sub-events>
+                <event-block sid="848498058492928">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="717665195639834" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="596086041757531">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="219999770920420" type="System">
+                                    <param id="0" name="Variable">vida</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="892255386829634" type="progress_bg_life">
+                                    <param id="0" name="Width">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="835359311000088">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="439692505458259" type="System">
+                                    <param id="0" name="Variable">vida</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="762874459592158" type="progress_bg_life">
+                                    <param id="0" name="Width">step_life_progress</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="249264395791249">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="566707757486174" type="System">
+                                    <param id="0" name="Variable">vida</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="641756255346330" type="progress_bg_life">
+                                    <param id="0" name="Width">step_life_progress*2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="398093041584156">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="746355015494727" type="System">
+                                    <param id="0" name="Variable">vida</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="513617269662234" type="progress_bg_life">
+                                    <param id="0" name="Width">step_life_progress*3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="351066895477309" title="Calculo do progresso do level">
+            <sub-events>
+                <event-block sid="470159980703138">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="919967328751060" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="178598647239930" type="level_progress_bg">
+                            <param id="0" name="Width">level_progress * step_level_progress</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
 </c2eventsheet>
