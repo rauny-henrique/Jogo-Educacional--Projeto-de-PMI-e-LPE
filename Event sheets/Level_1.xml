@@ -11,6 +11,10 @@
                 <condition id="-2" name="On start of layout" sid="314245333633844" type="System" />
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="419659314015098" type="System">
+                    <param id="0" name="Variable">vida</param>
+                    <param id="1" name="Value">3</param>
+                </action>
                 <action id="-9" name="Set value" sid="132898475329934" type="System">
                     <param id="0" name="Variable">level_progress</param>
                     <param id="1" name="Value">0</param>

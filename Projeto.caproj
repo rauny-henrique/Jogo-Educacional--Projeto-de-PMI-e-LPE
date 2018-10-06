@@ -964,6 +964,25 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="gameover_bg" sid="517786120508916">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="562549792004948" speed="5">
+                        <frame duration="1" hotspotX="0.500465" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\Imagens\gameover_bg.png">
+                            <collision-poly>
+                                <point x="0.0334884" y="0.0671642" />
+                                <point x="0.499535" y="0.00746269" />
+                                <point x="0.973953" y="0.0522388" />
+                                <point x="0.994419" y="0.5" />
+                                <point x="0.968372" y="0.936567" />
+                                <point x="0.499535" y="0.977612" />
+                                <point x="0.0344186" y="0.93097" />
+                                <point x="0.0055814" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type global="1" name="Navegation" sid="205472396623167">
             <plugin id="Dictionary" />
@@ -1106,6 +1125,7 @@
         </layout-folder>
         <layout-folder name="HUD">
             <layout>HUD.xml</layout>
+            <layout>GameOver.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
@@ -1123,6 +1143,7 @@
         </event-folder>
         <event-folder name="HUD">
             <event-sheet>#HUD.xml</event-sheet>
+            <event-sheet>#GameOver.xml</event-sheet>
         </event-folder>
     </event-folder>
     <global-instances>

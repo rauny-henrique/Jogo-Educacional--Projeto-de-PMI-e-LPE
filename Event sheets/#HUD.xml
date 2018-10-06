@@ -94,5 +94,63 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="268316001101366" title="Game over">
+            <sub-events>
+                <event-block sid="805753043792926">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="657802935948956" type="player">
+                            <param id="0" name="Object">chefe</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="237982396033916" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="756017001844809">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="429045326174082" type="System">
+                            <param id="0" name="Variable">vida</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="434282895247735" type="player" />
+                        <action id="-13" name="Set time scale" sid="515189648248607" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="399379206154022" type="System">
+                            <param id="0" name="Variable">timescale_</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="944427974699464" type="gameover_bg">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="787740573288195" type="btn_menu">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="414934980757240" type="btn_reload">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="827943565775099" type="bg_ui">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="536299196562617" type="bg_ui">
+                            <param id="0" name="Opacity">75</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="251098620903498" type="bg_ui">
+                            <param id="0" name="Width">LayoutWidth</param>
+                            <param id="1" name="Height">LayoutHeight</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="542707688570584" type="BtnUI">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

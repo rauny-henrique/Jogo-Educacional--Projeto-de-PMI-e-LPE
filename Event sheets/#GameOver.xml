@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>#GameOver</name>
+    <events>
+        <event-block sid="439405147765982">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="315259260071838" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_reload</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="341367068637324" type="System" />
+                <action id="-13" name="Set time scale" sid="134041409316959" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="928064199652454" type="System">
+                    <param id="0" name="Variable">timescale_</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="792634725470752" type="gameover_bg">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="708430100556694" type="btn_menu">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="971033460413026" type="btn_reload">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="674967145480919">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="428010760709346" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_menu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="605380312135342" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="540737705916567" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="614250166694667" type="System">
+                    <param id="0" name="Variable">timescale_</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="570067706699276" type="gameover_bg">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="357177805241497" type="btn_menu">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="932461993301985" type="btn_reload">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
