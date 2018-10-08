@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>#Level_1</name>
     <events>
+        <variable constant="0" name="numeroPergunta" sid="827675276577326" static="0" type="number">1</variable>
+        <variable constant="0" name="posicaoPergunta" sid="655889391472173" static="0" type="number">1</variable>
         <include>#GameOver</include>
         <include>#Pausa</include>
         <include>#HUD</include>
@@ -90,33 +92,127 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="641749767896641" title="Player">
+        <event-group description="" sid="641749767896641" title="Player" />
+        <event-block sid="913670314562249">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="333896157959715" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="257389402005943" type="player">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="408883606502760">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="362786115204223" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="933511243102810" type="player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="727359100993007">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="990116369510469" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Call expression" sid="986795722267459" type="Function">
+                    <param id="0" name="Expression">Function.Call(&quot;criaPergunta&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="715719226802324">
+            <conditions>
+                <condition id="0" name="On function" sid="508517769709162" type="Function">
+                    <param id="0" name="Name">&quot;criaPergunta&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="751109690793198" type="System">
+                    <param id="0" name="Variable">posicaoPergunta</param>
+                    <param id="1" name="Value">round(random(1,3))</param>
+                </action>
+                <action id="0" name="Set text" sid="169108962916389" type="textBoxPergunta">
+                    <param id="0" name="Text">str(posicaoPergunta)</param>
+                </action>
+            </actions>
             <sub-events>
-                <event-block sid="913670314562249">
+                <event-block sid="339461576381668">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="333896157959715" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
+                        <condition id="-14" name="Compare variable" sid="681984040741263" type="System">
+                            <param id="0" name="Variable">posicaoPergunta</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="257389402005943" type="player">
-                            <param id="0" name="State">0</param>
+                        <action id="-3" name="Create object" sid="900860456066396" type="System">
+                            <param id="0" name="Object to create">pergunta</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">drop1.X</param>
+                            <param id="3" name="Y">drop1.Y</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="408883606502760">
+                <event-block sid="431691632465640">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="362786115204223" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
+                        <condition id="-22" name="Else" sid="477110525361681" type="System" />
+                        <condition id="-8" name="Compare two values" sid="805799485668499" type="System">
+                            <param id="0" name="First value">posicaoPergunta</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="933511243102810" type="player">
-                            <param id="0" name="State">1</param>
+                        <action id="-3" name="Create object" sid="367737155108332" type="System">
+                            <param id="0" name="Object to create">pergunta</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">drop2.X</param>
+                            <param id="3" name="Y">drop2.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="891887110256624">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="357346237278367" type="System" />
+                        <condition id="-14" name="Compare variable" sid="293013459479661" type="System">
+                            <param id="0" name="Variable">posicaoPergunta</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="439378008328783" type="System">
+                            <param id="0" name="Object to create">pergunta</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">drop3.X</param>
+                            <param id="3" name="Y">drop3.Y</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-group>
+        </event-block>
+        <event-block sid="146155897894133">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="555520375082213" type="player">
+                    <param id="0" name="Object">pergunta</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="894973488103940" type="pergunta" />
+                <action id="2" name="Call expression" sid="972835693385821" type="Function">
+                    <param id="0" name="Expression">Function.Call(&quot;criaPergunta&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="226887732867629" type="textBoxPergunta">
+                    <param id="0" name="Text">&quot;agora ta no &quot;&amp; str(posicaoPergunta)</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

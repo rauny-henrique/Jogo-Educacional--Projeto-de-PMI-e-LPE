@@ -17,6 +17,7 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
@@ -1113,8 +1114,8 @@
                                 <point x="0.766309" y="0.0160547" />
                                 <point x="0.771016" y="0.0789844" />
                                 <point x="0.86375" y="0.076875" />
-                                <point x="0.86125" y="0.614375" />
-                                <point x="0.153125" y="0.6125" />
+                                <point x="0.858125" y="0.689375" />
+                                <point x="0.153125" y="0.696875" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1636,6 +1637,62 @@
         </object-type>
         <object-type name="ShadowLight" sid="426280215747729">
             <plugin id="shadowlight" />
+        </object-type>
+        <object-type name="drop1" sid="393975004953969">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160805840205934" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="drop2" sid="435463162540774">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="580535734776325" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="drop3" sid="737036144524981">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="420332149512404" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pergunta" sid="446563327445475">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="959385684483129" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Lance\Downloads\interroga.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="perguntas" sid="330062787713535">
+            <plugin id="Dictionary" />
+            <instance-variables>
+                <instance-variable name="perg1" sid="613954247097495" type="string" />
+                <instance-variable name="perg2" sid="238255704444593" type="string" />
+                <instance-variable name="perg3" sid="552813942372937" type="string" />
+                <instance-variable name="perg4" sid="431907013628401" type="string" />
+                <instance-variable name="perg5" sid="694621658645289" type="string" />
+                <instance-variable name="perg6" sid="957325889733933" type="string" />
+                <instance-variable name="perg7" sid="618389327983138" type="string" />
+                <instance-variable name="perg8" sid="242558227203099" type="string" />
+                <instance-variable name="resp1" sid="975489333787504" type="boolean" />
+                <instance-variable name="resp2" sid="688045234678369" type="boolean" />
+                <instance-variable name="resp3" sid="776603969831401" type="boolean" />
+                <instance-variable name="resp4" sid="413466325353019" type="boolean" />
+                <instance-variable name="resp5" sid="872253896322149" type="boolean" />
+                <instance-variable name="resp6" sid="471577417241419" type="boolean" />
+                <instance-variable name="resp7" sid="789194702421257" type="boolean" />
+                <instance-variable name="resp8" sid="357078034564340" type="boolean" />
+            </instance-variables>
+        </object-type>
+        <object-type name="textBoxPergunta" sid="653283883315429">
+            <plugin id="TextBox" />
         </object-type>
     </object-folder>
     <families>
