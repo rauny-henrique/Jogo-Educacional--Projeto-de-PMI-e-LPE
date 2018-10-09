@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>#Pergunta</name>
+    <events>
+        <comment>numeroPergunta é posição da pergunta no Dictionary Perguntas</comment>
+        <variable constant="0" name="lenght_Perguntas" sid="808367105124455" static="0" type="number">0</variable>
+        <variable constant="0" name="indexPergunta" sid="730947192896511" static="0" type="number">-1</variable>
+        <comment>posicaoPergunta é a posição da pergunta em dos spots de spawn de perguntas</comment>
+        <variable constant="0" name="max_spots_perguntas_to_spawn" sid="286867812282475" static="0" type="number">3</variable>
+        <variable constant="0" name="posicaoPergunta" sid="252625396513482" static="0" type="number">1</variable>
+        <event-group description="" sid="715368875441512" title="Start of layout - Pergunta">
+            <sub-events>
+                <event-block sid="948780694522691">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="591126084236527" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="244061328929309" type="Perguntas">
+                            <param id="0" name="Key">&quot;Perg0&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Add key" sid="605463937540520" type="Perguntas">
+                            <param id="0" name="Key">&quot;Perg1&quot;</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="478907716208110" type="System">
+                            <param id="0" name="Variable">lenght_Perguntas</param>
+                            <param id="1" name="Value">Perguntas.KeyCount</param>
+                        </action>
+                        <action id="0" name="Call function" sid="507552915641105" type="Function">
+                            <param id="0" name="Name">&quot;criaObjetoPergunta&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="305306411851420">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="864490592405270" type="player">
+                            <param id="0" name="Object">pergunta</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="500172794819993" type="pergunta" />
+                        <action id="0" name="Call function" sid="982811841478457" type="Function">
+                            <param id="0" name="Name">&quot;criaObjetoPergunta&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Set value" sid="483751937532344" type="System">
+                            <param id="0" name="Variable">indexPergunta</param>
+                            <param id="1" name="Value">round(random(0,lenght_Perguntas-1))</param>
+                        </action>
+                        <action id="0" name="Call function" sid="166997100260663" type="Function">
+                            <param id="0" name="Name">&quot;showPergunta&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>OBS: Cada pergunta só pode aparecer uma vez!!! Esta errado por enquanto!</comment>
+                        <event-block sid="268744878105645">
+                            <conditions>
+                                <condition id="1" name="For each key" sid="735701373223010" type="Perguntas" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="961277963853765">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="394368205811443" type="System">
+                                            <param id="0" name="First value">Perguntas.CurrentKey</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">str(&quot;Perg&quot;&amp;indexPergunta)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="987447145308270" type="TextPergunta">
+                                            <param id="0" name="Text">Perguntas.CurrentKey</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="500015313982106">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="664753712568129" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_false</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="260805494166921" type="Function">
+                            <param id="0" name="Name">&quot;avaliaResposta&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="143395405350596">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="386616283471014" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_true</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="954462440594128" type="Function">
+                            <param id="0" name="Name">&quot;avaliaResposta&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="875361957642565" title="Avalia resposta da pergunta">
+            <sub-events>
+                <variable constant="0" name="resposta" sid="462673525385015" static="0" type="number">0</variable>
+                <event-block sid="431945794345769">
+                    <conditions>
+                        <condition id="0" name="On function" sid="776304034545190" type="Function">
+                            <param id="0" name="Name">&quot;avaliaResposta&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="291450372845906" type="System">
+                            <param id="0" name="Variable">resposta</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="855354978517123">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="380550020732611" type="Perguntas">
+                                    <param id="0" name="Key">str(&quot;Perg&quot;&amp;indexPergunta)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">resposta</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="576940600214415" type="Function">
+                                    <param id="0" name="Name">&quot;showPergunta&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="372353596183645">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="807857879766882" type="System" />
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="596046632515489" title="Cria objeto pergunta">
+            <sub-events>
+                <comment>OBS: Essa função tem que criar um obj. de pergunta, em uma posição diferente da atual!!</comment>
+                <event-block sid="947650900957263">
+                    <conditions>
+                        <condition id="0" name="On function" sid="366742304617351" type="Function">
+                            <param id="0" name="Name">&quot;criaObjetoPergunta&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="862403927897190" type="System">
+                            <param id="0" name="Variable">posicaoPergunta</param>
+                            <param id="1" name="Value">round(random(1,max_spots_perguntas_to_spawn))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="875306915683216">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="273566127925634" type="System">
+                                    <param id="0" name="Variable">posicaoPergunta</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="611977170735294" type="System">
+                                    <param id="0" name="Object to create">pergunta</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">drop1.X</param>
+                                    <param id="3" name="Y">drop1.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="375428800056441">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="311737052492884" type="System" />
+                                <condition id="-8" name="Compare two values" sid="687500959324922" type="System">
+                                    <param id="0" name="First value">posicaoPergunta</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="822833319969391" type="System">
+                                    <param id="0" name="Object to create">pergunta</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">drop2.X</param>
+                                    <param id="3" name="Y">drop2.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="541418795272685">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="329736485441711" type="System" />
+                                <condition id="-14" name="Compare variable" sid="314318975614679" type="System">
+                                    <param id="0" name="Variable">posicaoPergunta</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="106803675278846" type="System">
+                                    <param id="0" name="Object to create">pergunta</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">drop3.X</param>
+                                    <param id="3" name="Y">drop3.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="198531883426062" title="Show or Hide Pergunta">
+            <sub-events>
+                <event-block sid="525349694491123">
+                    <conditions>
+                        <condition id="0" name="On function" sid="580681810604517" type="Function">
+                            <param id="0" name="Name">&quot;showPergunta&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="430920396368403">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="541058696921238" type="System">
+                                    <param id="0" name="Variable">timescale_</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="473903635869786" type="System">
+                                    <param id="0" name="Time scale">0.1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="890060843124455" type="System">
+                                    <param id="0" name="Variable">timescale_</param>
+                                    <param id="1" name="Value">0.1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="156151517115772" type="bg_ui">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="236065212488248" type="bg_ui">
+                                    <param id="0" name="Opacity">75</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="615743389682456" type="bg_ui">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                    <param id="1" name="Height">LayoutHeight</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="515231629441798" type="System">
+                                    <param id="0" name="Layer">&quot;Pergunta&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="360766175182783">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="624524937730960" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="412517960686386" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="788714623120886" type="System">
+                                    <param id="0" name="Variable">timescale_</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="771288164162553" type="bg_ui">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="710940035237348" type="bg_ui">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="717096658861289" type="bg_ui">
+                                    <param id="0" name="Width">0</param>
+                                    <param id="1" name="Height">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="357030681888984" type="System">
+                                    <param id="0" name="Layer">&quot;Pergunta&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="607404307397988" title="Mouse Over2">
+            <sub-events>
+                <event-block any="1" sid="855921378014994">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="753869900439014" type="Mouse">
+                            <param id="0" name="Object">BtnPergunta</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="544285049794554" type="BtnPergunta">
+                            <param id="0" name="Scale">0.35</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="358987853852379">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="170698425599463" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="326097104281686" type="BtnPergunta">
+                            <param id="0" name="Scale">0.3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

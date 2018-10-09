@@ -997,8 +997,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-40</x>
-                        <y>360</y>
+                        <x>-64.546813965</x>
+                        <y>353.636260986</y>
                         <z>0</z>
                         <width>40</width>
                         <height>40</height>
@@ -1007,32 +1007,6 @@
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="textBoxPergunta" uid="83">
-                    <properties>
-                        <text></text>
-                        <placeholder></placeholder>
-                        <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <read-only>No</read-only>
-                        <spell-check>No</spell-check>
-                        <type>Text</type>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>640</x>
-                        <y>0</y>
-                        <z>0</z>
-                        <width>150</width>
-                        <height>22</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
                     </world>
                 </instance>
             </instances>
@@ -1110,28 +1084,27 @@
             <instances />
             <effects />
         </layer>
+        <layer name="Pergunta" sid="415150798884893">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
     </layers>
     <nonworld-instances>
-        <instance type="perguntas" uid="82">
-            <instance-variables>
-                <perg1>True ou True</perg1>
-                <perg2>True ou False</perg2>
-                <perg3>False ou False</perg3>
-                <perg4>False ou True</perg4>
-                <perg5>True e True</perg5>
-                <perg6>True e False</perg6>
-                <perg7>False e False</perg7>
-                <perg8>False e True</perg8>
-                <resp1>true</resp1>
-                <resp2>true</resp2>
-                <resp3>false</resp3>
-                <resp4>true</resp4>
-                <resp5>true</resp5>
-                <resp6>false</resp6>
-                <resp7>false</resp7>
-                <resp8>false</resp8>
-            </instance-variables>
-        </instance>
+        <instance type="Perguntas" uid="82" />
     </nonworld-instances>
     <effects />
 </c2layout>

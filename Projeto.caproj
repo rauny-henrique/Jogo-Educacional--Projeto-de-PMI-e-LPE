@@ -17,7 +17,6 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
@@ -1617,6 +1616,110 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Pergunta">
+            <object-type name="bg_pergunta" sid="637757221726747">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869783557084637" speed="5">
+                        <frame duration="1" hotspotX="0.500394" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\Imagens\bg_pergunta.png">
+                            <collision-poly>
+                                <point x="0.0772262" y="0.114486" />
+                                <point x="0.499606" y="0.00116822" />
+                                <point x="0.914106" y="0.127336" />
+                                <point x="0.996848" y="0.5" />
+                                <point x="0.972419" y="0.959112" />
+                                <point x="0.499606" y="0.985981" />
+                                <point x="0.0299448" y="0.955607" />
+                                <point x="0.00394011" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btn_false" sid="909431133877134">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="528042452018927" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502415" original-source="C:\Users\rauny\Desktop\Imagens\btn_false.png">
+                            <collision-poly>
+                                <point x="0.0332326" y="0.100516" />
+                                <point x="0.5" y="0.0239679" />
+                                <point x="0.965185" y="0.1053" />
+                                <point x="0.992084" y="0.497608" />
+                                <point x="0.958856" y="0.875563" />
+                                <point x="0.5" y="0.937758" />
+                                <point x="0.0363971" y="0.889916" />
+                                <point x="0.00791635" y="0.497608" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btn_true" sid="356538579667982">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="788182339050686" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502262" original-source="C:\Users\rauny\Desktop\Imagens\btn_true.png">
+                            <collision-poly>
+                                <point x="0.0846193" y="0.171295" />
+                                <point x="0.5" y="0.0939521" />
+                                <point x="0.825081" y="0.352566" />
+                                <point x="0.810632" y="0.5" />
+                                <point x="0.775716" y="0.548339" />
+                                <point x="0.219468" y="0.558007" />
+                                <point x="0.0870273" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextPergunta" sid="623766718597539">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="pergunta" sid="446563327445475">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="959385684483129" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\rauny\Desktop\Imagens\interrogacao.png">
+                            <collision-poly>
+                                <point x="0.134831" y="0.096" />
+                                <point x="0.494382" y="0.008" />
+                                <point x="0.865169" y="0.096" />
+                                <point x="0.853933" y="0.496" />
+                                <point x="0.606742" y="0.72" />
+                                <point x="0.494382" y="0.992" />
+                                <point x="0.393258" y="0.72" />
+                                <point x="0.359551" y="0.496" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="drop1" sid="393975004953969">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160805840205934" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="drop2" sid="435463162540774">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="580535734776325" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="drop3" sid="737036144524981">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="420332149512404" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type global="1" name="Navegation" sid="205472396623167">
             <plugin id="Dictionary" />
             <instance-variables>
@@ -1638,61 +1741,8 @@
         <object-type name="ShadowLight" sid="426280215747729">
             <plugin id="shadowlight" />
         </object-type>
-        <object-type name="drop1" sid="393975004953969">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="160805840205934" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="drop2" sid="435463162540774">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="580535734776325" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="drop3" sid="737036144524981">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="420332149512404" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="pergunta" sid="446563327445475">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="959385684483129" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Lance\Downloads\interroga.jpg" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type global="1" name="perguntas" sid="330062787713535">
+        <object-type global="1" name="Perguntas" sid="330062787713535">
             <plugin id="Dictionary" />
-            <instance-variables>
-                <instance-variable name="perg1" sid="613954247097495" type="string" />
-                <instance-variable name="perg2" sid="238255704444593" type="string" />
-                <instance-variable name="perg3" sid="552813942372937" type="string" />
-                <instance-variable name="perg4" sid="431907013628401" type="string" />
-                <instance-variable name="perg5" sid="694621658645289" type="string" />
-                <instance-variable name="perg6" sid="957325889733933" type="string" />
-                <instance-variable name="perg7" sid="618389327983138" type="string" />
-                <instance-variable name="perg8" sid="242558227203099" type="string" />
-                <instance-variable name="resp1" sid="975489333787504" type="boolean" />
-                <instance-variable name="resp2" sid="688045234678369" type="boolean" />
-                <instance-variable name="resp3" sid="776603969831401" type="boolean" />
-                <instance-variable name="resp4" sid="413466325353019" type="boolean" />
-                <instance-variable name="resp5" sid="872253896322149" type="boolean" />
-                <instance-variable name="resp6" sid="471577417241419" type="boolean" />
-                <instance-variable name="resp7" sid="789194702421257" type="boolean" />
-                <instance-variable name="resp8" sid="357078034564340" type="boolean" />
-            </instance-variables>
-        </object-type>
-        <object-type name="textBoxPergunta" sid="653283883315429">
-            <plugin id="TextBox" />
         </object-type>
     </object-folder>
     <families>
@@ -1799,6 +1849,12 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="BtnPergunta" plugin-id="Sprite" sid="818648488743595">
+            <members>
+                <member>btn_false</member>
+                <member>btn_true</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout-folder name="MenuPrincipal">
@@ -1815,6 +1871,9 @@
         <layout-folder name="HUD">
             <layout>HUD.xml</layout>
             <layout>GameOver.xml</layout>
+        </layout-folder>
+        <layout-folder name="Pergunta">
+            <layout>Pergunta.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
@@ -1833,6 +1892,9 @@
         <event-folder name="HUD">
             <event-sheet>#HUD.xml</event-sheet>
             <event-sheet>#GameOver.xml</event-sheet>
+        </event-folder>
+        <event-folder name="Pergunta">
+            <event-sheet>#Pergunta.xml</event-sheet>
         </event-folder>
     </event-folder>
     <global-instances>
