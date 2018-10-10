@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>#NivelCompleto</name>
+    <events>
+        <event-block sid="993495978556184">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="427069201017347" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_reload</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="306320346617531" type="System" />
+                <action id="-13" name="Set time scale" sid="423522351160213" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="937745789669574" type="System">
+                    <param id="0" name="Variable">timescale_</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="688360707188847" type="bg_nivel_completo">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="382912156554380">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="298337433264692" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_menu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="725404200033037" type="System">
+                    <param id="0" name="Layout">Menu</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="613145904130127" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="714385906631005" type="System">
+                    <param id="0" name="Variable">timescale_</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="625448025005923" type="bg_nivel_completo">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="245542708627118" title="Show or Hide NivelCompleto">
+            <sub-events>
+                <event-block sid="430315492733102">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="541724260522294" type="bg_nivel_completo" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="881094541058377" type="btn_menu">
+                            <param id="0" name="Object">bg_nivel_completo</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="423111990011998" type="btn_reload">
+                            <param id="0" name="Object">bg_nivel_completo</param>
+                            <param id="1" name="Image point (optional)">2</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="906932905104734" type="btn_proximo">
+                            <param id="0" name="Object">bg_nivel_completo</param>
+                            <param id="1" name="Image point (optional)">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="808907677503513">
+                    <conditions>
+                        <condition id="0" name="On function" sid="269170634553827" type="Function">
+                            <param id="0" name="Name">&quot;showNivelCompleto&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="961552019850420">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="816851312191959" type="System">
+                                    <param id="0" name="Variable">timescale_</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="346159498711949" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="634464003484124" type="System">
+                                    <param id="0" name="Variable">timescale_</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="222340415258026" type="bg_ui">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="581091367604001" type="bg_ui">
+                                    <param id="0" name="Opacity">75</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="894905331634681" type="bg_ui">
+                                    <param id="0" name="Width">LayoutWidth</param>
+                                    <param id="1" name="Height">LayoutHeight</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="358877522816846" type="bg_nivel_completo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="138980028194823">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="485569613094711" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="210067440628422" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="704111034480997" type="System">
+                                    <param id="0" name="Variable">timescale_</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="107360314598471" type="bg_ui">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="639899562477819" type="bg_ui">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="504988754367810" type="bg_ui">
+                                    <param id="0" name="Width">0</param>
+                                    <param id="1" name="Height">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="757764361494063" type="bg_nivel_completo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -10,6 +10,7 @@
     <unique-id>16lywm3qerto6</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -716,6 +717,25 @@
                                 <point x="0.5" y="0.755102" />
                                 <point x="0.0317919" y="0.77551" />
                                 <point x="0.00867052" y="0.489796" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btn_proximo" sid="972730678426433">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="224146994332630" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="C:\Users\rauny\Desktop\Imagens\btn_proximo.png">
+                            <collision-poly>
+                                <point x="0.160194" y="0.15493" />
+                                <point x="0.5" y="0" />
+                                <point x="0.839806" y="0.15493" />
+                                <point x="0.980583" y="0.497653" />
+                                <point x="0.834951" y="0.840376" />
+                                <point x="0.5" y="0.953052" />
+                                <point x="0.169903" y="0.835681" />
+                                <point x="0.0194175" y="0.497653" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1632,6 +1652,8 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869783557084637" speed="5">
                         <frame duration="1" hotspotX="0.500394" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\Imagens\bg_pergunta.png">
+                            <image-point name="false" x="0.255319" y="0.974299" />
+                            <image-point name="true" x="0.754925" y="0.968458" />
                             <collision-poly>
                                 <point x="0.0772262" y="0.114486" />
                                 <point x="0.499606" y="0.00116822" />
@@ -1729,6 +1751,28 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="bg_nivel_completo" sid="199721096311490">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="951375677910619" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\Imagens\bg_nivel_completo.png">
+                            <image-point name="btn_menu" x="0.230501" y="0.968193" />
+                            <image-point name="btn_reload" x="0.500696" y="0.968193" />
+                            <image-point name="btn_proximo" x="0.782033" y="0.968193" />
+                            <collision-poly>
+                                <point x="0.0800836" y="0.0731552" />
+                                <point x="0.5" y="0.000636132" />
+                                <point x="0.933844" y="0.0604326" />
+                                <point x="0.994429" y="0.5" />
+                                <point x="0.961003" y="0.964377" />
+                                <point x="0.5" y="0.98855" />
+                                <point x="0.04039" y="0.963104" />
+                                <point x="0.00626741" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type global="1" name="Navegation" sid="205472396623167">
             <plugin id="Dictionary" />
@@ -1753,6 +1797,9 @@
         </object-type>
         <object-type global="1" name="Perguntas" sid="330062787713535">
             <plugin id="Dictionary" />
+        </object-type>
+        <object-type global="1" name="Perguntas_Random" sid="943629097121522">
+            <plugin id="Arr" />
         </object-type>
     </object-folder>
     <families>
@@ -1884,6 +1931,7 @@
         </layout-folder>
         <layout-folder name="Pergunta">
             <layout>Pergunta.xml</layout>
+            <layout>NivelCompleto.xml</layout>
         </layout-folder>
     </layout-folder>
     <event-folder>
@@ -1905,6 +1953,7 @@
         </event-folder>
         <event-folder name="Pergunta">
             <event-sheet>#Pergunta.xml</event-sheet>
+            <event-sheet>#NivelCompleto.xml</event-sheet>
         </event-folder>
     </event-folder>
     <global-instances>

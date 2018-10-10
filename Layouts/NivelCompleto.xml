@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Pergunta</name>
-    <sid>726384918801012</sid>
+    <name>NivelCompleto</name>
+    <sid>496358962386427</sid>
     <event-sheet></event-sheet>
     <size>
         <width>854</width>
@@ -13,10 +13,10 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Backdrop" sid="753246243289916">
+        <layer name="Backdrop" sid="737001167148463">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
-            <transparent>0</transparent>
+            <transparent>1</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
@@ -31,7 +31,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="Pergunta" sid="774220984165340">
+        <layer name="NivelCompleto" sid="596325122374440">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -47,7 +47,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="bg_pergunta" uid="84">
+                <instance type="bg_nivel_completo" uid="88">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -57,19 +57,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>427.259246826</x>
+                        <x>427</x>
                         <y>240</y>
                         <z>0</z>
-                        <width>658</width>
-                        <height>371</height>
+                        <width>453.468505859</width>
+                        <height>358.720581055</height>
                         <depth>0</depth>
-                        <hotspotX>0.500393987</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btn_false" uid="85">
+                <instance type="btn_menu" uid="89">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -79,19 +79,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>276</x>
-                        <y>549.84197998</y>
+                        <x>306.036651611</x>
+                        <y>-62.779815674</y>
                         <z>0</z>
-                        <width>190.605102539</width>
-                        <height>69.673171997</height>
+                        <width>71</width>
+                        <height>69</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.502415478</hotspotY>
+                        <hotspotY>0.50234741</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="btn_true" uid="86">
+                <instance type="btn_reload" uid="90">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -101,41 +101,36 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>558</x>
-                        <y>551</y>
+                        <x>423.994537354</x>
+                        <y>-62.779815674</y>
                         <z>0</z>
-                        <width>190.604995728</width>
-                        <height>72</height>
+                        <width>71</width>
+                        <height>69</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.502262473</hotspotY>
+                        <hotspotY>0.50234741</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextPergunta" uid="87">
+                <instance type="btn_proximo" uid="91">
                     <properties>
-                        <text>Texto da Pergunta</text>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <font>Gill Sans Ultra Bold,-37,400,1</font>
-                        <color>0,153,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>209.5</x>
-                        <y>158</y>
+                        <x>542.701782227</x>
+                        <y>-62.779815674</y>
                         <z>0</z>
-                        <width>457</width>
-                        <height>205</height>
+                        <width>71</width>
+                        <height>69</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.50234741</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
