@@ -11,6 +11,7 @@
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -1834,6 +1835,9 @@
         <object-type global="1" name="Perguntas_Random" sid="943629097121522">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="Audio" sid="208317070617652">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families>
         <family name="BtnMenu" plugin-id="Sprite" sid="312552735332136">
@@ -1999,9 +2003,35 @@
         <global-instance type="Keyboard" uid="9" />
         <global-instance type="Function" uid="10" />
         <global-instance type="LocalStorage" uid="56" />
+        <global-instance type="Audio" uid="112">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
-    <music-folder />
+    <sounds-folder>
+        <file name="som_acerto.m4a" />
+        <file name="som_acerto.ogg" />
+        <file name="som_erro.m4a" />
+        <file name="som_erro.ogg" />
+        <file name="som_perdeu.m4a" />
+        <file name="som_perdeu.ogg" />
+        <file name="som_pergunta.m4a" />
+        <file name="som_pergunta.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="Bully OST Main Theme.m4a" />
+        <file name="Bully OST Main Theme.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

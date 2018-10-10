@@ -14,17 +14,47 @@
                 <condition id="-2" name="On start of layout" sid="314245333633844" type="System" />
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="203702729839563" type="Audio">
+                    <param id="0" name="Audio file">Bully OST Main Theme</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="3" name="Clear" sid="161779454324130" type="Perguntas" />
                 <action id="0" name="Add key" sid="982722394482773" type="Perguntas">
                     <param id="0" name="Key">&quot;Q0|Literais Booleanos ou Lógicos: correspondem a valores true (verdadeiro) e false (falso).&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="0" name="Add key" sid="693038505281839" type="Perguntas">
-                    <param id="0" name="Key">&quot;Q1|A sentença a seguir é verdadeira: TRUE &amp;&amp; TRUE = FALSE&quot;</param>
+                    <param id="0" name="Key">&quot;Q1|A sentença a seguir é verdadeira: TRUE &amp;&amp; TRUE = TRUE&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Add key" sid="853270393416886" type="Perguntas">
+                    <param id="0" name="Key">&quot;Q2|A sentença a seguir é verdadeira TRUE&amp;&amp;FALSE=FALSE&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Add key" sid="959562010847069" type="Perguntas">
+                    <param id="0" name="Key">&quot;Q3|A sentença a seguir é verdadeira FALSE&amp;&amp;FALSE=FALSE&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Add key" sid="176473695825102" type="Perguntas">
+                    <param id="0" name="Key">&quot;Q4|A sentença a seguir é verdadeira FALSE&amp;&amp;TRUE=FALSE&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Add key" sid="830492109874462" type="Perguntas">
+                    <param id="0" name="Key">&quot;Q5|A sentença a seguir é falsa TRUE&amp;&amp;TRUE=TRUE&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action disabled="1" id="0" name="Add key" sid="853270393416886" type="Perguntas">
-                    <param id="0" name="Key">&quot;Q2|Literais Booleanos ou Lógicos: correspondem a valores true (verdadeiro) e false (falso).&quot;</param>
+                <action id="0" name="Add key" sid="990538483361423" type="Perguntas">
+                    <param id="0" name="Key">&quot;Q6|A sentença a seguir é falsa TRUE ou FALSE=TRUE&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Add key" sid="614910743597984" type="Perguntas">
+                    <param id="0" name="Key">&quot;Q7|A sentença a seguir é falsa TRUE ou TRUE=TRUE&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Add key" sid="740131439814176" type="Perguntas">
+                    <param id="0" name="Key">&quot;Q8|A sentença a seguir é falsa FALSE ou FALSE=TRUE&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-9" name="Set value" sid="279159071148905" type="System">
@@ -58,6 +88,14 @@
                     <param id="0" name="Variable">timescale_</param>
                     <param id="1" name="Value">1</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="265283142301687">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="212119366836556" type="System" />
+            </conditions>
+            <actions>
+                <action id="37" name="Unload all audio" sid="322264853511522" type="Audio" />
             </actions>
         </event-block>
         <event-group description="" sid="385134422753936" title="Chefe">

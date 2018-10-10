@@ -51,6 +51,12 @@
                             <param id="0" name="Variable">lenght_Perguntas</param>
                             <param id="1" name="Value">Perguntas.KeyCount</param>
                         </action>
+                        <action id="0" name="Play" sid="895160187401272" type="Audio">
+                            <param id="0" name="Audio file">som_pergunta</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <comment>Embaralha as perguntas (isso ocorre somente uma vez)</comment>
@@ -221,6 +227,12 @@
                                         <action id="-10" name="Add to" sid="171903656343975" type="System">
                                             <param id="0" name="Variable">quantidade_de_acertos</param>
                                             <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="979538636344094" type="Audio">
+                                            <param id="0" name="Audio file">som_acerto</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
