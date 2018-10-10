@@ -71,7 +71,7 @@
                 </instance>
                 <instance type="btn_false" uid="85">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -93,7 +93,7 @@
                 </instance>
                 <instance type="btn_true" uid="86">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -117,10 +117,10 @@
                     <properties>
                         <text>Texto da Pergunta</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Gill Sans Ultra Bold,-37,400,1</font>
-                        <color>0,153,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
+                        <font>Carter One,-24,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -128,10 +128,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>209.5</x>
-                        <y>158</y>
+                        <x>147</x>
+                        <y>164</y>
                         <z>0</z>
-                        <width>457</width>
+                        <width>565</width>
                         <height>205</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

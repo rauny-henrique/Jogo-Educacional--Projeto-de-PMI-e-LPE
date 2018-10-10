@@ -129,14 +129,14 @@
                                 <event-block sid="395726396808836">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="279105298273141" type="System">
-                                            <param id="0" name="First value">Perguntas.CurrentKey</param>
+                                            <param id="0" name="First value">tokenat(Perguntas.CurrentKey, 0, &quot;|&quot;)</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">str(&quot;Perg&quot;&amp;Perguntas_Random.At(level_progress))</param>
+                                            <param id="2" name="Second value">str(&quot;Q&quot;&amp;Perguntas_Random.At(level_progress))</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set text" sid="693092522120628" type="TextPergunta">
-                                            <param id="0" name="Text">Perguntas.CurrentKey</param>
+                                            <param id="0" name="Text">tokenat(Perguntas.CurrentKey, 1, &quot;|&quot;)</param>
                                         </action>
                                         <action id="0" name="Call function" sid="601550191320665" type="Function">
                                             <param id="0" name="Name">&quot;showPergunta&quot;</param>
@@ -155,6 +155,7 @@
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">btn_false</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="173628910163831" type="btn_false" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="331938523646440" type="Function">
@@ -170,6 +171,7 @@
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">btn_true</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="820477236242557" type="btn_true" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="865959632764796" type="Function">
@@ -200,36 +202,55 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <comment>Certa resposta!</comment>
-                        <event-block sid="546253834523720">
+                        <event-block sid="104322662272554">
                             <conditions>
-                                <condition id="0" name="Compare value" sid="392614174911943" type="Perguntas">
-                                    <param id="0" name="Key">str(&quot;Perg&quot;&amp;level_progress)</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">resposta</param>
-                                </condition>
+                                <condition id="1" name="For each key" sid="724145913904725" type="Perguntas" />
                             </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="171903656343975" type="System">
-                                    <param id="0" name="Variable">quantidade_de_acertos</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="193583554447002" type="Function">
-                                    <param id="0" name="Name">&quot;showPergunta&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="359197732869052">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="578373063508745" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="114691229931308" type="Function">
-                                    <param id="0" name="Name">&quot;showPergunta&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="151238357885130">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="457623962364720" type="System">
+                                            <param id="0" name="First value">tokenat(Perguntas.CurrentKey, 0, &quot;|&quot;)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">str(&quot;Q&quot;&amp;Perguntas_Random.At(level_progress))</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <comment>Certa resposta!</comment>
+                                        <event-block sid="602100374406784">
+                                            <conditions>
+                                                <condition id="2" name="Compare current value" sid="373271025428214" type="Perguntas">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Value">resposta</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="171903656343975" type="System">
+                                                    <param id="0" name="Variable">quantidade_de_acertos</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="193583554447002" type="Function">
+                                                    <param id="0" name="Name">&quot;showPergunta&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="359197732869052">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="578373063508745" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="114691229931308" type="Function">
+                                                    <param id="0" name="Name">&quot;showPergunta&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -237,46 +258,6 @@
         </event-group>
         <event-group description="" sid="959907506763592" title="Show or Hide Pergunta">
             <sub-events>
-                <event-block sid="915906002166835">
-                    <conditions>
-                        <condition id="-9" name="Is visible" sid="434078241569741" type="bg_pergunta" />
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="729269945783378" type="btn_false">
-                            <param id="0" name="Object">bg_pergunta</param>
-                            <param id="1" name="Image point (optional)">1</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="592448195306087" type="btn_true">
-                            <param id="0" name="Object">bg_pergunta</param>
-                            <param id="1" name="Image point (optional)">2</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="537823937968650" type="btn_false">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="904456290391132" type="btn_true">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="807916257917748" type="TextPergunta">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="588074205445069">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="892416017252867" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="464745252388221" type="btn_false">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="391597842050105" type="btn_true">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="735884650347748" type="TextPergunta">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="319086800747362">
                     <conditions>
                         <condition id="0" name="On function" sid="672143893705371" type="Function">
@@ -314,6 +295,26 @@
                                 <action id="-15" name="Set visible" sid="773479412081450" type="bg_pergunta">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="-4" name="Set position to another object" sid="729269945783378" type="btn_false">
+                                    <param id="0" name="Object">bg_pergunta</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="592448195306087" type="btn_true">
+                                    <param id="0" name="Object">bg_pergunta</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="537823937968650" type="btn_false">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="904456290391132" type="btn_true">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="807916257917748" type="TextPergunta">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="166633531245443" type="btn_pause">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="109296912044645">
@@ -340,6 +341,18 @@
                                 </action>
                                 <action id="-15" name="Set visible" sid="771422742381785" type="bg_pergunta">
                                     <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="464745252388221" type="btn_false">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="391597842050105" type="btn_true">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="735884650347748" type="TextPergunta">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="285647501392021" type="btn_pause">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>

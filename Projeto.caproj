@@ -1773,6 +1773,39 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="star" sid="649327694362606">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799250004331210" speed="5">
+                        <frame duration="1" hotspotX="0.501901" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\Imagens\star_full.png">
+                            <collision-poly>
+                                <point x="0.254753" y="0.268" />
+                                <point x="0.498099" y="0.008" />
+                                <point x="0.931559" y="0.5" />
+                                <point x="0.836502" y="0.828" />
+                                <point x="0.498099" y="0.872" />
+                                <point x="0.144487" y="0.848" />
+                                <point x="0.0684411" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.501961" hotspotY="0.502058" original-source="C:\Users\rauny\Desktop\Imagens\start_empty.png">
+                            <collision-poly>
+                                <point x="0.270588" y="0.283951" />
+                                <point x="0.498039" y="0.00411523" />
+                                <point x="0.745098" y="0.26749" />
+                                <point x="0.92549" y="0.497942" />
+                                <point x="0.870588" y="0.864198" />
+                                <point x="0.498039" y="0.880658" />
+                                <point x="0.184314" y="0.806584" />
+                                <point x="0.0588235" y="0.497942" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TextDesempenhoNivel" sid="836811680234307">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-type global="1" name="Navegation" sid="205472396623167">
             <plugin id="Dictionary" />

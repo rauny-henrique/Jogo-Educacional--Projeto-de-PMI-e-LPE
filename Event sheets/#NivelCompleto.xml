@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>#NivelCompleto</name>
     <events>
+        <variable constant="0" name="desempenho_nivel" sid="902087577385638" static="0" type="number">0</variable>
         <event-block sid="993495978556184">
             <conditions>
                 <condition id="6" name="On object clicked" sid="427069201017347" type="Mouse">
@@ -10,6 +11,7 @@
                     <param id="1" name="Click type">0</param>
                     <param id="2" name="Object clicked">btn_reload</param>
                 </condition>
+                <condition id="-9" name="Is visible" sid="594926831657166" type="btn_reload" />
             </conditions>
             <actions>
                 <action id="-26" name="Restart layout" sid="306320346617531" type="System" />
@@ -32,6 +34,7 @@
                     <param id="1" name="Click type">0</param>
                     <param id="2" name="Object clicked">btn_menu</param>
                 </condition>
+                <condition id="-9" name="Is visible" sid="988628867264863" type="btn_menu" />
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="725404200033037" type="System">
@@ -51,25 +54,6 @@
         </event-block>
         <event-group description="" sid="245542708627118" title="Show or Hide NivelCompleto">
             <sub-events>
-                <event-block sid="430315492733102">
-                    <conditions>
-                        <condition id="-9" name="Is visible" sid="541724260522294" type="bg_nivel_completo" />
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="881094541058377" type="btn_menu">
-                            <param id="0" name="Object">bg_nivel_completo</param>
-                            <param id="1" name="Image point (optional)">1</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="423111990011998" type="btn_reload">
-                            <param id="0" name="Object">bg_nivel_completo</param>
-                            <param id="1" name="Image point (optional)">2</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="906932905104734" type="btn_proximo">
-                            <param id="0" name="Object">bg_nivel_completo</param>
-                            <param id="1" name="Image point (optional)">3</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="808907677503513">
                     <conditions>
                         <condition id="0" name="On function" sid="269170634553827" type="Function">
@@ -107,6 +91,36 @@
                                 <action id="-15" name="Set visible" sid="358877522816846" type="bg_nivel_completo">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="464915759271658" type="star">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="840528803049577" type="TextDesempenhoNivel">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="461519995918468" type="btn_menu">
+                                    <param id="0" name="Object">bg_nivel_completo</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="263826068444084" type="btn_reload">
+                                    <param id="0" name="Object">bg_nivel_completo</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="326572463988813" type="btn_proximo">
+                                    <param id="0" name="Object">bg_nivel_completo</param>
+                                    <param id="1" name="Image point (optional)">3</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="610794557970365" type="btn_pause">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="959429627457124" type="btn_menu">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="668183223197494" type="btn_reload">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="883995472457557" type="btn_proximo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="138980028194823">
@@ -134,11 +148,145 @@
                                 <action id="-15" name="Set visible" sid="757764361494063" type="bg_nivel_completo">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="350561651222209" type="star">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="727958802616607" type="TextDesempenhoNivel">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="191925750621770" type="btn_pause">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="166486007765345" type="btn_menu">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="781795364999193" type="btn_reload">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="529513553773236" type="btn_proximo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="879800022393197">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="247436223549955" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="711307789326113" type="System">
+                    <param id="0" name="Variable">desempenho_nivel</param>
+                    <param id="1" name="Value">(quantidade_de_acertos / lenght_Perguntas) * 100</param>
+                </action>
+                <action id="0" name="Set text" sid="321798670140485" type="TextDesempenhoNivel">
+                    <param id="0" name="Text">str(&quot;Você acertou &quot;&amp;quantidade_de_acertos&amp;&quot; de &quot;&amp;lenght_Perguntas&amp;&quot; questões&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="912951894735216">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="977102446005930" type="star">
+                    <param id="0" name="Unique ID">92</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="983371574996547">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="823157319737336" type="System">
+                            <param id="0" name="Variable">desempenho_nivel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">33</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="182448000588977" type="star">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="332097976678797">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="311294978487919" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="524427604229934" type="star">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="424619777827603">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="942351694734727" type="star">
+                    <param id="0" name="Unique ID">93</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="127329888474133">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="127269918976530" type="System">
+                            <param id="0" name="Variable">desempenho_nivel</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">66</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="811022330306654" type="star">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="869185819859147">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="982481767207284" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="382581997694581" type="star">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="208857064939772">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="127569819923969" type="star">
+                    <param id="0" name="Unique ID">94</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="459691088614988">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="382365411256415" type="System">
+                            <param id="0" name="Variable">desempenho_nivel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="857279698818294" type="star">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="424969608268457">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="985323010243638" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="951690601496941" type="star">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>
