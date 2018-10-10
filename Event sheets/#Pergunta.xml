@@ -184,7 +184,7 @@
         </event-group>
         <event-group description="" sid="295696346682752" title="Avalia resposta da pergunta">
             <sub-events>
-                <variable constant="0" name="resposta" sid="237406710379279" static="0" type="number">0</variable>
+                <variable constant="0" name="resposta" sid="237406710379279" static="0" type="number">-1</variable>
                 <event-block sid="492589609111724">
                     <conditions>
                         <condition id="0" name="On function" sid="848633141803683" type="Function">
@@ -196,10 +196,6 @@
                             <param id="0" name="Variable">resposta</param>
                             <param id="1" name="Value">Function.Param(0)</param>
                         </action>
-                        <action id="-10" name="Add to" sid="776355948890212" type="System">
-                            <param id="0" name="Variable">level_progress</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="104322662272554">
@@ -208,6 +204,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
+                                <comment>Certa resposta!</comment>
                                 <event-block sid="151238357885130">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="457623962364720" type="System">
@@ -215,42 +212,32 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">str(&quot;Q&quot;&amp;Perguntas_Random.At(level_progress))</param>
                                         </condition>
+                                        <condition id="2" name="Compare current value" sid="373271025428214" type="Perguntas">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Value">resposta</param>
+                                        </condition>
                                     </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <comment>Certa resposta!</comment>
-                                        <event-block sid="602100374406784">
-                                            <conditions>
-                                                <condition id="2" name="Compare current value" sid="373271025428214" type="Perguntas">
-                                                    <param id="0" name="Comparison">0</param>
-                                                    <param id="1" name="Value">resposta</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Add to" sid="171903656343975" type="System">
-                                                    <param id="0" name="Variable">quantidade_de_acertos</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="193583554447002" type="Function">
-                                                    <param id="0" name="Name">&quot;showPergunta&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="359197732869052">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="578373063508745" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="114691229931308" type="Function">
-                                                    <param id="0" name="Name">&quot;showPergunta&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="171903656343975" type="System">
+                                            <param id="0" name="Variable">quantidade_de_acertos</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="523379324305163">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Add to" sid="776355948890212" type="System">
+                                    <param id="0" name="Variable">level_progress</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="193583554447002" type="Function">
+                                    <param id="0" name="Name">&quot;showPergunta&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>

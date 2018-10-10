@@ -31,6 +31,7 @@
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">btn_pause</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="324891869175401" type="btn_pause" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="250274340420542" type="Function">
