@@ -681,8 +681,8 @@
                         <behavior-instance type="8Direction">
                             <properties>
                                 <max-speed>100</max-speed>
-                                <acceleration>100</acceleration>
-                                <deceleration>100</deceleration>
+                                <acceleration>150</acceleration>
+                                <deceleration>150</deceleration>
                                 <directions>4 directions</directions>
                                 <set-angle>No</set-angle>
                                 <default-controls>Yes</default-controls>
@@ -884,9 +884,9 @@
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>25</max-speed>
+                                <max-speed>50</max-speed>
                                 <acceleration>25</acceleration>
-                                <deceleration>50</deceleration>
+                                <deceleration>100</deceleration>
                                 <rotate-speed>135</rotate-speed>
                                 <rotate-object>No</rotate-object>
                                 <diagonals>Enabled</diagonals>

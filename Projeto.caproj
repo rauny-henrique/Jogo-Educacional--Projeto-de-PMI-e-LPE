@@ -753,7 +753,17 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="43" loop="1" name="Correndo" pingpong="0" repeatcount="1" repeatto="0" sid="453296527175884" speed="20">
+                    <animation framecount="1" loop="1" name="Parado" pingpong="1" repeatcount="1" repeatto="0" sid="145130277029709" speed="11">
+                        <frame duration="1" hotspotX="0.512821" hotspotY="0.5" original-source="C:\Users\Lance\Downloads\PLAYER SPRITE\player run\run_015.png">
+                            <collision-poly>
+                                <point x="0" y="0.525" />
+                                <point x="0.99359" y="0.525" />
+                                <point x="0.98718" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="43" loop="1" name="Correndo" pingpong="0" repeatcount="1" repeatto="0" sid="453296527175884" speed="40">
                         <frame duration="1" hotspotX="0.512821" hotspotY="0.5" original-source="C:\Users\Lance\Downloads\PLAYER SPRITE\player run\run_000.png">
                             <collision-poly>
                                 <point x="0" y="0.525" />

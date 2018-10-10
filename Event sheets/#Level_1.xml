@@ -93,9 +93,31 @@
         </event-group>
         <event-group description="" sid="641749767896641" title="Player">
             <sub-events>
+                <event-block sid="184063840553181">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" name="Is moving" sid="224044270701861" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="623533454799542" type="player">
+                            <param id="0" name="Animation">&quot;Correndo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="711133750329455">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="583690100361936" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="693441179553355" type="player">
+                            <param id="0" name="Animation">&quot;Parado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="913670314562249">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="333896157959715" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="333896157959715" type="Keyboard">
                             <param id="0" name="Key">37 (Left arrow)</param>
                         </condition>
                     </conditions>
@@ -107,7 +129,7 @@
                 </event-block>
                 <event-block sid="408883606502760">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="362786115204223" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="362786115204223" type="Keyboard">
                             <param id="0" name="Key">39 (Right arrow)</param>
                         </condition>
                     </conditions>
