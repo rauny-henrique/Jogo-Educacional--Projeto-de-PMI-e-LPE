@@ -148,6 +148,10 @@
                                 <action id="-15" name="Set visible" sid="129227206737675" type="btn_menu">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="3" name="Set volume" sid="749341024473230" type="Audio">
+                                    <param id="0" name="Tag">&quot;music&quot;</param>
+                                    <param id="1" name="dB">-10</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="496224978292299">
@@ -186,6 +190,10 @@
                                 </action>
                                 <action id="-15" name="Set visible" sid="217480970095245" type="btn_menu">
                                     <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="636779544057396" type="Audio">
+                                    <param id="0" name="Tag">&quot;music&quot;</param>
+                                    <param id="1" name="dB">0</param>
                                 </action>
                             </actions>
                         </event-block>

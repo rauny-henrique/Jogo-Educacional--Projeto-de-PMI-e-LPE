@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>#Conteudo</name>
+    <events>
+        <include>#Voltar</include>
+        <variable constant="0" name="show_btn_jogar" sid="266239457343484" static="0" type="number">0</variable>
+        <variable constant="0" name="current_page" sid="971173053242187" static="0" type="number">1</variable>
+        <variable constant="0" name="last_page" sid="693827370616131" static="0" type="number">-1</variable>
+        <event-group description="" sid="725604414373798" title="Conteudo">
+            <sub-events>
+                <variable constant="0" name="page_seperator" sid="970719619171956" static="0" type="text">$%</variable>
+                <comment>As perguntas são definidas de acordo com o Level-1 que corresponde ao index do array Conteudo. As paginas são definidas/separadas por &quot;page_seperator&quot;</comment>
+                <event-block sid="762366871371431">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="968146039969993" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" sid="819408710162081" type="Conteudo">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;Literais são as representações de dados dentro do código fonte. um literal é uma notação para representar um valor fixo no código fonte. Quase todas as linguagens de programação têm notações para valores atômicos como inteiros, números de ponto flutuante, strings e booleanos, algumas também têm notações para elementos de tipos enumerados e valores compostos, tais como arranjos, registros e objetos.&#x0D;&#x0A;&#x0D;&#x0A;Literais Booleanos ou Lógicos: correspondem ao valores true (verdadeiro) e false (falso).&#x0D;&#x0A;&quot;&amp;page_seperator&amp;&quot;Em eletrônica, costuma-se ensinar apresentando como exemplo uma lâmpada, que pode estar acesa (verdadeiro) ou apagada (falso). Isso é o básico. Na literatura você pode encontrar esses dados de diferentes formas, por exemplo: verdadeiro/falso, aceso/apagado, 1/0, ligado/desligado, true/false, sim/não, etc...&#x0D;&#x0A;&quot;&amp;page_seperator&amp;&quot;Os literais atribuem valores às variáveis ou partes do código. Ou seja, eles são usados para fazer com que variáveis passem a ter um valor ou se executem cálculos.&#x0D;&#x0A;&#x0D;&#x0A;Exemplo: &#x0D;&#x0A;boolean ligado = true;&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="696848908547888" type="System">
+                            <param id="0" name="Variable">show_btn_jogar</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="797875360022292" type="System">
+                            <param id="0" name="Variable">current_page</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="791084868099960" type="System">
+                            <param id="0" name="Variable">last_page</param>
+                            <param id="1" name="Value">tokencount(Conteudo.At(Level_seleted-1), page_seperator)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="170723749921711">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="804124699804983" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="163404951092637">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="237693535089605" type="System">
+                                    <param id="0" name="Variable">current_page</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="521265271344154" type="btn_page_anterior">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="526038872157906">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="860737517506184" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="973283305486841" type="btn_page_anterior">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="459281141849069">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="856715638759544" type="System">
+                                    <param id="0" name="Variable">current_page</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">last_page</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="546753175219023" type="btn_page_proximo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="582109277219626" type="System">
+                                    <param id="0" name="Variable">show_btn_jogar</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="231343936372168">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="739546920059815" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="244124432633824" type="btn_page_proximo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="345890154552826">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="374741727102080" type="System">
+                                    <param id="0" name="Variable">show_btn_jogar</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="596491639414509" type="btn_jogar">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="175662020027212">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="954504960991325" type="TextConteudo">
+                                    <param id="0" name="Text">tokenat(Conteudo.At(Level_seleted-1), current_page-1, page_seperator)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="522522230329518" title="Mouse Event - Conteudo">
+            <sub-events>
+                <event-block sid="772737709869543">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="153291354475750" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_page_anterior</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="571946964321922" type="btn_page_anterior" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="611400581777402" type="System">
+                            <param id="0" name="Variable">current_page</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="346404986077064">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="878881232830831" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_page_proximo</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="176965615133205" type="btn_page_proximo" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="586999733867771" type="System">
+                            <param id="0" name="Variable">current_page</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="820989205647627">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="409472642617321" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">btn_jogar</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="151615571650384" type="btn_jogar" />
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="638082787890585" type="System">
+                            <param id="0" name="Layout">str(&quot;Level_&quot;&amp;Level_seleted)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

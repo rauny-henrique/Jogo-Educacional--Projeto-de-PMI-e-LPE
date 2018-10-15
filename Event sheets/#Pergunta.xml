@@ -55,7 +55,7 @@
                             <param id="0" name="Audio file">som_pergunta</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="1" name="Tag (optional)">&quot;effect&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -190,6 +190,7 @@
         </event-group>
         <event-group description="" sid="295696346682752" title="Avalia resposta da pergunta">
             <sub-events>
+                <variable constant="0" name="flagErro" sid="107629553252729" static="0" type="number">1</variable>
                 <variable constant="0" name="resposta" sid="237406710379279" static="0" type="number">-1</variable>
                 <event-block sid="492589609111724">
                     <conditions>
@@ -232,11 +233,32 @@
                                             <param id="0" name="Audio file">som_acerto</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                            <param id="1" name="Tag (optional)">&quot;effect&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="593834198869913" type="System">
+                                            <param id="0" name="Variable">flagErro</param>
+                                            <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="688679431824412">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="902870736598503" type="System">
+                                    <param id="0" name="Variable">flagErro</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="200095775748566" type="Audio">
+                                    <param id="0" name="Audio file">som_erro</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;effect&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="523379324305163">
                             <conditions />
@@ -314,6 +336,10 @@
                                 <action id="-15" name="Set visible" sid="166633531245443" type="btn_pause">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="3" name="Set volume" sid="900478272802436" type="Audio">
+                                    <param id="0" name="Tag">&quot;audio_main_theme&quot;</param>
+                                    <param id="1" name="dB">-10</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="109296912044645">
@@ -352,6 +378,10 @@
                                 </action>
                                 <action id="-15" name="Set visible" sid="285647501392021" type="btn_pause">
                                     <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set volume" sid="787767166381040" type="Audio">
+                                    <param id="0" name="Tag">&quot;audio_main_theme&quot;</param>
+                                    <param id="1" name="dB">0</param>
                                 </action>
                             </actions>
                         </event-block>

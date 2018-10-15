@@ -360,6 +360,33 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
+            <object-folder name="conteudo">
+                <object-type name="bg_conteudo" sid="190225151304358">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="714623908015681" speed="5">
+                            <frame duration="1" hotspotX="0.500394" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\Imagens\bg_conteudo.png">
+                                <collision-poly>
+                                    <point x="0.0772262" y="0.114486" />
+                                    <point x="0.499606" y="0.00116822" />
+                                    <point x="0.914106" y="0.127336" />
+                                    <point x="0.996848" y="0.5" />
+                                    <point x="0.972419" y="0.959112" />
+                                    <point x="0.499606" y="0.985981" />
+                                    <point x="0.0299448" y="0.955607" />
+                                    <point x="0.00394011" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TextConteudo" sid="215608593865589">
+                    <plugin id="Text" />
+                </object-type>
+                <object-type global="1" name="Conteudo" sid="918802781141600">
+                    <plugin id="Arr" />
+                </object-type>
+            </object-folder>
             <object-type name="bg_menu" sid="316279611473111">
                 <plugin id="TiledBg" />
                 <texture original-source="C:\Users\rauny\Downloads\1526056886733.png" />
@@ -481,29 +508,31 @@
             <object-type name="btn_config" sid="927757543807181">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802706818539008" speed="5">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="802706818539008" speed="0">
                         <frame duration="1" hotspotX="0.509709" hotspotY="0.483568" original-source="C:\Users\rauny\Desktop\images\btn_settings.png">
                             <collision-poly>
-                                <point x="0.160194" y="0.15493" />
+                                <point x="0.11165" y="0.098592" />
                                 <point x="0.5" y="0" />
-                                <point x="0.839806" y="0.15493" />
-                                <point x="0.980583" y="0.497653" />
-                                <point x="0.834951" y="0.840376" />
-                                <point x="0.5" y="0.953052" />
-                                <point x="0.169903" y="0.835681" />
-                                <point x="0.0194175" y="0.497653" />
+                                <point x="0.902913" y="0.0938971" />
+                                <point x="0.995146" y="0.553991" />
+                                <point x="0.888349" y="0.849766" />
+                                <point x="0.504854" y="0.985916" />
+                                <point x="0.07767" y="0.85446" />
+                                <point x="0" y="0.497653" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.509709" hotspotY="0.874279" original-source="C:\Users\rauny\Desktop\images\btn_settings_expanded.png">
+                        <frame duration="1" hotspotX="0.504854" hotspotY="0.830769" original-source="C:\Users\rauny\Desktop\Imagens\btn_config_bg.png">
+                            <image-point name="sound" x="0.543689" y="0.221538" />
+                            <image-point name="music" x="0.543689" y="0.5" />
                             <collision-poly>
-                                <point x="0.199029" y="0.0472895" />
+                                <point x="0.101942" y="0.0472895" />
                                 <point x="0.5" y="0.0103806" />
-                                <point x="0.839806" y="0.0380623" />
-                                <point x="0.927184" y="0.499423" />
-                                <point x="0.834951" y="0.960784" />
+                                <point x="0.946602" y="0.0411392" />
+                                <point x="0.946602" y="0.499423" />
+                                <point x="1" y="0.966938" />
                                 <point x="0.5" y="0.989619" />
-                                <point x="0.169903" y="0.959631" />
-                                <point x="0.126214" y="0.499423" />
+                                <point x="0" y="0.965785" />
+                                <point x="0.0970878" y="0.499423" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -737,6 +766,128 @@
                                 <point x="0.5" y="0.953052" />
                                 <point x="0.169903" y="0.835681" />
                                 <point x="0.0194175" y="0.497653" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Audio" sid="208317070617652">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="sound" sid="698162202432510">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="874811259770348" speed="5">
+                        <frame duration="1" hotspotX="0.503546" hotspotY="0.507042" original-source="C:\Users\rauny\Desktop\Imagens\sound_effects_on.png">
+                            <collision-poly>
+                                <point x="0.0614036" y="0.306931" />
+                                <point x="0.438597" y="0.039604" />
+                                <point x="0.868421" y="0" />
+                                <point x="0.991228" y="0.49505" />
+                                <point x="0.868421" y="0.950495" />
+                                <point x="0.482456" y="1" />
+                                <point x="0.0614035" y="0.712871" />
+                                <point x="0.00877193" y="0.49505" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.503546" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\Imagens\sound_effects_off.png">
+                            <collision-poly>
+                                <point x="0.141844" y="0.140845" />
+                                <point x="0.496454" y="0" />
+                                <point x="0.858156" y="0.140845" />
+                                <point x="1" y="0.5" />
+                                <point x="0.865248" y="0.866197" />
+                                <point x="0.496454" y="0.992958" />
+                                <point x="0.134752" y="0.866197" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="music" sid="531309381961620">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="335919855499065" speed="5">
+                        <frame duration="1" hotspotX="0.503546" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\Imagens\music_on.png">
+                            <collision-poly>
+                                <point x="0.387755" y="0.316667" />
+                                <point x="0.5" y="0.00833333" />
+                                <point x="0.857143" y="0.116667" />
+                                <point x="0.673469" y="0.5" />
+                                <point x="0.683673" y="0.741667" />
+                                <point x="0.5" y="0.958333" />
+                                <point x="0.0816327" y="0.933333" />
+                                <point x="0.408163" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.503546" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\Imagens\music_off.png">
+                            <collision-poly>
+                                <point x="0.141844" y="0.140845" />
+                                <point x="0.496454" y="0" />
+                                <point x="0.858156" y="0.140845" />
+                                <point x="1" y="0.5" />
+                                <point x="0.865248" y="0.866197" />
+                                <point x="0.496454" y="0.992958" />
+                                <point x="0.134752" y="0.866197" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btn_page_anterior" sid="401237045611120">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="863537995846891" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="C:\Users\rauny\Desktop\Imagens\btn_page_anterior.png">
+                            <collision-poly>
+                                <point x="0.160194" y="0.15493" />
+                                <point x="0.5" y="0" />
+                                <point x="0.839806" y="0.15493" />
+                                <point x="0.980583" y="0.497653" />
+                                <point x="0.834951" y="0.840376" />
+                                <point x="0.5" y="0.953052" />
+                                <point x="0.169903" y="0.835681" />
+                                <point x="0.0194175" y="0.497653" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btn_page_proximo" sid="350732328459582">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="130598735506879" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="C:\Users\rauny\Desktop\Imagens\btn_page_proximo.png">
+                            <collision-poly>
+                                <point x="0.160194" y="0.15493" />
+                                <point x="0.5" y="0" />
+                                <point x="0.839806" y="0.15493" />
+                                <point x="0.980583" y="0.497653" />
+                                <point x="0.834951" y="0.840376" />
+                                <point x="0.5" y="0.953052" />
+                                <point x="0.169903" y="0.835681" />
+                                <point x="0.0194175" y="0.497653" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="btn_jogar" sid="567540113187607">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="601871822002736" speed="5">
+                        <frame duration="1" hotspotX="0.500795" hotspotY="0.502439" original-source="C:\Users\rauny\Desktop\Imagens\btn_jogar.png">
+                            <collision-poly>
+                                <point x="0.0317965" y="0.097561" />
+                                <point x="0.499205" y="0.0146341" />
+                                <point x="0.969793" y="0.0926829" />
+                                <point x="0.99523" y="0.497561" />
+                                <point x="0.961844" y="0.882927" />
+                                <point x="0.499205" y="0.946341" />
+                                <point x="0.0349762" y="0.892683" />
+                                <point x="0.0063593" y="0.497561" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1835,9 +1986,6 @@
         <object-type global="1" name="Perguntas_Random" sid="943629097121522">
             <plugin id="Arr" />
         </object-type>
-        <object-type name="Audio" sid="208317070617652">
-            <plugin id="Audio" />
-        </object-type>
     </object-folder>
     <families>
         <family name="BtnMenu" plugin-id="Sprite" sid="312552735332136">
@@ -1970,6 +2118,7 @@
             <layout>Pergunta.xml</layout>
             <layout>NivelCompleto.xml</layout>
         </layout-folder>
+        <layout>Conteudo.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="MenuPrincipal">
@@ -1992,6 +2141,7 @@
             <event-sheet>#Pergunta.xml</event-sheet>
             <event-sheet>#NivelCompleto.xml</event-sheet>
         </event-folder>
+        <event-sheet>#Conteudo.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="3" />
@@ -2027,10 +2177,12 @@
         <file name="som_perdeu.ogg" />
         <file name="som_pergunta.m4a" />
         <file name="som_pergunta.ogg" />
+        <file name="FF3_Victory_Fanfare_.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="Bully OST Main Theme.m4a" />
         <file name="Bully OST Main Theme.ogg" />
+        <file name="Game Menu.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>#Menu</name>
     <events>
+        <variable constant="0" name="music_on" sid="286637107129816" static="0" type="number">1</variable>
         <variable constant="0" name="menu_selected" sid="846558758134518" static="0" type="number">0</variable>
         <event-group description="" sid="126688381782392" title="Start of Layout">
             <sub-events>
@@ -26,6 +27,21 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="894891829061757">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="561664460946371" type="Audio">
+                                    <param id="0" name="Tag">&quot;music&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="432749774887487" type="Audio">
+                                    <param id="0" name="Audio file">Game Menu</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="127616067922957">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="972271701734465" type="System">
@@ -288,6 +304,52 @@
                             <param id="0" name="Frame number">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="170522772150876">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="370684656124920" type="btn_config">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="496971615087859" type="music">
+                                    <param id="0" name="Object">btn_config</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="229876548687221" type="music">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>musica do jogo</comment>
+                                <event-block sid="564012519724754">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="468656632936514" type="System">
+                                            <param id="0" name="Variable">music_on</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="224585602100305" type="music">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="281430807190521">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="925908445551616" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="980627686798602" type="music">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="119843805105550">
                     <conditions>
@@ -297,7 +359,57 @@
                         <action id="5" name="Set frame" sid="843402394925745" type="btn_config">
                             <param id="0" name="Frame number">0</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="729495808829243" type="music">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
+                </event-block>
+                <event-block sid="626844487760050">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="349222482762276" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">music</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="759027772769638" type="music" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="206559179682251">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="943124508006760" type="System">
+                                    <param id="0" name="Variable">music_on</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set muted" sid="601294790854050" type="Audio">
+                                    <param id="0" name="Tag">&quot;music&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="248727974699137" type="System">
+                                    <param id="0" name="Variable">music_on</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="617947723978786">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="442849104339682" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set muted" sid="562001196105247" type="Audio">
+                                    <param id="0" name="Tag">&quot;music&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="329794275334755" type="System">
+                                    <param id="0" name="Variable">music_on</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

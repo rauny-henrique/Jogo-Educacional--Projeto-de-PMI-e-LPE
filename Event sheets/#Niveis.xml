@@ -6,6 +6,7 @@
         <include>#Voltar</include>
         <variable constant="0" name="Level" sid="796067780694138" static="0" type="number">1</variable>
         <variable constant="0" name="Level_module_complete" sid="950463851763558" static="0" type="number">0</variable>
+        <variable constant="0" name="Level_seleted" sid="992849770158343" static="0" type="number">1</variable>
         <variable constant="0" name="Step_progress" sid="536027483668492" static="0" type="number">89.423</variable>
         <event-group description="" sid="386158553731853" title="On Layout Start">
             <sub-events>
@@ -240,8 +241,12 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-25" name="Go to layout (by name)" sid="507080723304638" type="System">
-                                    <param id="0" name="Layout">str(&quot;Level_&quot;&amp;BtnNivel.level)</param>
+                                <action id="-9" name="Set value" sid="193565193932568" type="System">
+                                    <param id="0" name="Variable">Level_seleted</param>
+                                    <param id="1" name="Value">BtnNivel.level</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="710627410098213" type="System">
+                                    <param id="0" name="Layout">Conteudo</param>
                                 </action>
                             </actions>
                         </event-block>

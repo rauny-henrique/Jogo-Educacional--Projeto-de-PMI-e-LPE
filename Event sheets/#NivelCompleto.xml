@@ -25,6 +25,10 @@
                 <action id="-15" name="Set visible" sid="688360707188847" type="bg_nivel_completo">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="-9" name="Set value" sid="342007352419693" type="System">
+                    <param id="0" name="Variable">level_progress</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="382912156554380">
@@ -49,6 +53,10 @@
                 </action>
                 <action id="-15" name="Set visible" sid="625448025005923" type="bg_nivel_completo">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="738117207833234" type="System">
+                    <param id="0" name="Variable">level_progress</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
