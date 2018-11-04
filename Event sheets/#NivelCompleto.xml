@@ -129,6 +129,18 @@
                                 <action id="-15" name="Set visible" sid="883995472457557" type="btn_proximo">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="350003804399160" type="scrollbarSlider">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="542194660623787" type="scrollbarTrack">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="653184023140786" type="bg_pergunta_nivel_completo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="362622347327433" type="TextResumo">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="138980028194823">
@@ -172,6 +184,18 @@
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="529513553773236" type="btn_proximo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="888965960247064" type="scrollbarSlider">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="480588863508087" type="scrollbarTrack">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="919192415505047" type="bg_pergunta_nivel_completo">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="555801005451702" type="TextResumo">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
@@ -295,6 +319,54 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <variable constant="0" name="dragIndex" sid="804925513877912" static="0" type="number">0</variable>
+        <variable constant="0" name="dragMinY" sid="271152896110777" static="0" type="number">0</variable>
+        <variable constant="0" name="dragMaxY" sid="227426085563673" static="0" type="number">0</variable>
+        <event-block sid="508788651243480">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="774391697388344" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="979987838896708" type="System">
+                    <param id="0" name="Variable">dragMinY</param>
+                    <param id="1" name="Value">scrollbarTrack.Y+scrollbarSlider.Height/2</param>
+                </action>
+                <action id="-9" name="Set value" sid="499532352094922" type="System">
+                    <param id="0" name="Variable">dragMaxY</param>
+                    <param id="1" name="Value">scrollbarTrack.Y+scrollbarTrack.Height-scrollbarSlider.Height/2</param>
+                </action>
+                <action id="-9" name="Set value" sid="515649152857635" type="System">
+                    <param id="0" name="Variable">dragIndex</param>
+                    <param id="1" name="Value">206.586/(dragMaxY-dragMinY)</param>
+                </action>
+                <action id="-1" name="Set X" sid="630884633162388" type="scrollbarSlider">
+                    <param id="0" name="X">scrollbarTrack.X</param>
+                </action>
+                <action id="-2" name="Set Y" sid="350473300413312" type="scrollbarSlider">
+                    <param id="0" name="Y">dragMinY</param>
+                </action>
+                <action id="-2" name="Set Y" sid="617708322471291" type="center_scroll">
+                    <param id="0" name="Y">240</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="978245400212047">
+            <conditions>
+                <condition behavior="DragDrop" id="0" name="Is dragging" sid="997925251289084" type="scrollbarSlider" />
+                <condition behavior="DragDrop" id="2" name="On drop" sid="174971162349817" type="scrollbarSlider" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="457828998708572" type="scrollbarSlider">
+                    <param id="0" name="Y">clamp(scrollbarSlider.Y,dragMinY,dragMaxY)</param>
+                </action>
+                <action id="-2" name="Set Y" sid="359060488719489" type="center_scroll">
+                    <param id="0" name="Y">240+(scrollbarSlider.Y-dragMinY)*dragIndex</param>
+                </action>
+                <action id="-2" name="Set Y" sid="848015808113221" type="bg_pergunta_nivel_completo">
+                    <param id="0" name="Y">204.221-(scrollbarSlider.Y-dragMinY)*dragIndex</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

@@ -25,6 +25,7 @@
         <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
@@ -1907,10 +1908,10 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="951375677910619" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\Imagens\bg_nivel_completo.png">
-                            <image-point name="btn_menu" x="0.230501" y="0.968193" />
-                            <image-point name="btn_reload" x="0.500696" y="0.968193" />
-                            <image-point name="btn_proximo" x="0.782033" y="0.968193" />
+                        <frame duration="1" hotspotX="0.500426" hotspotY="0.5" original-source="C:\Users\rauny\Desktop\Imagens\bg_nivel_completo_v.png">
+                            <image-point name="btn_menu" x="0.230179" y="0.968223" />
+                            <image-point name="btn_reload" x="0.500426" y="0.968223" />
+                            <image-point name="btn_proximo" x="0.781756" y="0.968223" />
                             <collision-poly>
                                 <point x="0.0800836" y="0.0731552" />
                                 <point x="0.5" y="0.000636132" />
@@ -1985,6 +1986,75 @@
         </object-type>
         <object-type global="1" name="Perguntas_Random" sid="943629097121522">
             <plugin id="Arr" />
+        </object-type>
+        <object-type name="scrollbarTrack" sid="609025525164208">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="490218759269142" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\rauny\Desktop\Imagens\bg_scroll.png">
+                        <collision-poly>
+                            <point x="0.136364" y="0.00378788" />
+                            <point x="0.818182" y="0.00505051" />
+                            <point x="0.863636" y="0.5" />
+                            <point x="0.818182" y="0.99495" />
+                            <point x="0.227273" y="0.993687" />
+                            <point x="0.227273" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextResumo" sid="197780083297275">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="scrollbarSlider" sid="262578575582166">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="234765777099426">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="697109799804324" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="C:\Users\rauny\Desktop\Imagens\scroll_handler.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.0347826" />
+                            <point x="0.5" y="0.00869565" />
+                            <point x="0.8" y="0.0347826" />
+                            <point x="0.9" y="0.495652" />
+                            <point x="0.8" y="0.965217" />
+                            <point x="0.5" y="0.982609" />
+                            <point x="0.25" y="0.956522" />
+                            <point x="0.05" y="0.495652" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bg_pergunta_nivel_completo" sid="786597427250014">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\rauny\Desktop\Imagens\bg_pergunta_nivel_completo.png" />
+        </object-type>
+        <object-type name="center_scroll" sid="182021560130371">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="202248146463963">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="760803033559617" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="mask" sid="565207908795093">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="345069802834531" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>

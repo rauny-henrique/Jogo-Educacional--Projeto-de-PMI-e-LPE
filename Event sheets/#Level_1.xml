@@ -19,7 +19,7 @@
                     <param id="0" name="Key">&quot;Q0|Literais Booleanos ou Lógicos: correspondem a valores true (verdadeiro) e false (falso).&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="0" name="Add key" sid="693038505281839" type="Perguntas">
+                <action disabled="1" id="0" name="Add key" sid="693038505281839" type="Perguntas">
                     <param id="0" name="Key">&quot;Q1|A sentença a seguir é verdadeira: TRUE &amp;&amp; TRUE = TRUE&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
