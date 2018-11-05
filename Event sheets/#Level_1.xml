@@ -19,15 +19,15 @@
                     <param id="0" name="Key">&quot;Q0|Literais Booleanos ou Lógicos: correspondem a valores true (verdadeiro) e false (falso).&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action disabled="1" id="0" name="Add key" sid="693038505281839" type="Perguntas">
+                <action id="0" name="Add key" sid="693038505281839" type="Perguntas">
                     <param id="0" name="Key">&quot;Q1|A sentença a seguir é verdadeira: TRUE &amp;&amp; TRUE = TRUE&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action disabled="1" id="0" name="Add key" sid="853270393416886" type="Perguntas">
+                <action id="0" name="Add key" sid="853270393416886" type="Perguntas">
                     <param id="0" name="Key">&quot;Q2|A sentença a seguir é verdadeira TRUE&amp;&amp;FALSE=FALSE&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action disabled="1" id="0" name="Add key" sid="959562010847069" type="Perguntas">
+                <action id="0" name="Add key" sid="959562010847069" type="Perguntas">
                     <param id="0" name="Key">&quot;Q3|A sentença a seguir é verdadeira FALSE&amp;&amp;FALSE=FALSE&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
@@ -81,6 +81,10 @@
                 <action id="-9" name="Set value" sid="702708750126841" type="System">
                     <param id="0" name="Variable">timescale_</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="765461842991363" type="System">
+                    <param id="0" name="Variable">heightPerguntas</param>
+                    <param id="1" name="Value">lenght_Perguntas * 78</param>
                 </action>
             </actions>
             <sub-events>

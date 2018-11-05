@@ -255,35 +255,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="center_scroll" uid="126">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="ScrollTo">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>427</x>
-                        <y>240</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
@@ -375,28 +346,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="mask" uid="127">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>8</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>425</x>
-                        <y>37</y>
-                        <z>0</z>
-                        <width>394</width>
-                        <height>332</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="mask" uid="128">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -409,6 +358,138 @@
                     <world>
                         <x>422</x>
                         <y>556</y>
+                        <z>0</z>
+                        <width>394</width>
+                        <height>332</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="text_questao_num" uid="126">
+                    <properties>
+                        <text>Questão X</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Carter One,-16,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>68.278656006</x>
+                        <y>-87.369445801</y>
+                        <z>0</z>
+                        <width>87</width>
+                        <height>25</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="text_questao_resp" uid="129">
+                    <properties>
+                        <text>Resposta: Verdadeiro</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Carter One,-16,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>67.657470703</x>
+                        <y>-65.09475708</y>
+                        <z>0</z>
+                        <width>179</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="correto" uid="130">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>34.291717529</x>
+                        <y>-62.609146118</y>
+                        <z>0</z>
+                        <width>49.751312256</width>
+                        <height>49.267944336</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502564132</hotspotX>
+                        <hotspotY>0.502564132</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="incorreto" uid="132">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>33.602966309</x>
+                        <y>-125.681655884</y>
+                        <z>0</z>
+                        <width>49.750999451</width>
+                        <height>49.268001556</height>
+                        <depth>0</depth>
+                        <hotspotX>0.502564132</hotspotX>
+                        <hotspotY>0.502564132</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="mask" uid="127">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>8</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>425</x>
+                        <y>37</y>
                         <z>0</z>
                         <width>394</width>
                         <height>332</height>

@@ -3,7 +3,11 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>#NivelCompleto</name>
     <events>
+        <variable constant="0" name="heightPerguntas" sid="279961263445443" static="0" type="number">0</variable>
         <variable constant="0" name="desempenho_nivel" sid="902087577385638" static="0" type="number">0</variable>
+        <variable constant="0" name="HeightAtual" sid="382176451857798" static="0" type="number">0</variable>
+        <variable constant="0" name="X" sid="198856818831359" static="0" type="number">307.019</variable>
+        <variable constant="0" name="Y" sid="288948780611557" static="0" type="number">243.562</variable>
         <event-block sid="993495978556184">
             <conditions>
                 <condition id="6" name="On object clicked" sid="427069201017347" type="Mouse">
@@ -142,6 +146,207 @@
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <variable constant="0" name="count" sid="204849811135579" static="0" type="number">1</variable>
+                                <event-block sid="526495899699077">
+                                    <conditions>
+                                        <condition id="1" name="For each key" sid="664405800669355" type="Historico_Perguntas_Respostas" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="724324387475371">
+                                            <conditions>
+                                                <condition id="1" name="For each key" sid="631829903616530" type="Perguntas" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="418074178959669">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="599694187933052" type="System">
+                                                            <param id="0" name="First value">Historico_Perguntas_Respostas.CurrentKey</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">tokenat(Perguntas.CurrentKey, 0, &quot;|&quot;)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="527047322733241">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="379916424688533" type="System">
+                                                                    <param id="0" name="First value">Historico_Perguntas_Respostas.CurrentValue</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">Perguntas.CurrentValue</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Create object" sid="775536389647954" type="System">
+                                                                    <param id="0" name="Object to create">correto</param>
+                                                                    <param id="1" name="Layer">&quot;SlideLayer&quot;</param>
+                                                                    <param id="2" name="X">X</param>
+                                                                    <param id="3" name="Y">Y</param>
+                                                                </action>
+                                                                <action behavior="Pin" id="0" name="Pin to object" sid="427106421205943" type="correto">
+                                                                    <param id="0" name="Pin to">bg_pergunta_nivel_completo</param>
+                                                                    <param id="1" name="Mode">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="632999994336663">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="771342094604715" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Create object" sid="886695975796277" type="System">
+                                                                    <param id="0" name="Object to create">incorreto</param>
+                                                                    <param id="1" name="Layer">&quot;SlideLayer&quot;</param>
+                                                                    <param id="2" name="X">X</param>
+                                                                    <param id="3" name="Y">Y</param>
+                                                                </action>
+                                                                <action behavior="Pin" id="0" name="Pin to object" sid="713821854151879" type="incorreto">
+                                                                    <param id="0" name="Pin to">bg_pergunta_nivel_completo</param>
+                                                                    <param id="1" name="Mode">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="986528832021704">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="619299015761608" type="System">
+                                                                    <param id="0" name="First value">Perguntas.CurrentValue</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Create object" sid="229693244197777" type="System">
+                                                                    <param id="0" name="Object to create">text_questao_resp</param>
+                                                                    <param id="1" name="Layer">&quot;SlideLayer&quot;</param>
+                                                                    <param id="2" name="X">X+33</param>
+                                                                    <param id="3" name="Y">Y-3</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="453880025591874" type="text_questao_resp">
+                                                                    <param id="0" name="Text">str(&quot;Resposta: Verdadeira&quot;)</param>
+                                                                </action>
+                                                                <action behavior="Pin" id="0" name="Pin to object" sid="295596656102485" type="text_questao_resp">
+                                                                    <param id="0" name="Pin to">bg_pergunta_nivel_completo</param>
+                                                                    <param id="1" name="Mode">0</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="480306995026617">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="882767920770054" type="System">
+                                                                            <param id="0" name="First value">Historico_Perguntas_Respostas.CurrentValue</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">Perguntas.CurrentValue</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set font color" sid="433573838065098" type="text_questao_resp">
+                                                                            <param id="0" name="Color">rgb(123, 234, 65)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="436939987189885">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="843876468972184" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set font color" sid="999963161550036" type="text_questao_resp">
+                                                                            <param id="0" name="Color">rgb(234, 0, 0)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="430051821916762">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="999224552711136" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Create object" sid="530740734583921" type="System">
+                                                                    <param id="0" name="Object to create">text_questao_resp</param>
+                                                                    <param id="1" name="Layer">&quot;SlideLayer&quot;</param>
+                                                                    <param id="2" name="X">X+33</param>
+                                                                    <param id="3" name="Y">Y-3</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="834856440679177" type="text_questao_resp">
+                                                                    <param id="0" name="Text">str(&quot;Resposta: Falsa&quot;)</param>
+                                                                </action>
+                                                                <action behavior="Pin" id="0" name="Pin to object" sid="137976033400839" type="text_questao_resp">
+                                                                    <param id="0" name="Pin to">bg_pergunta_nivel_completo</param>
+                                                                    <param id="1" name="Mode">0</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="311456488690928">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="704689767028688" type="System">
+                                                                            <param id="0" name="First value">Historico_Perguntas_Respostas.CurrentValue</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">Perguntas.CurrentValue</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set font color" sid="103476716200632" type="text_questao_resp">
+                                                                            <param id="0" name="Color">rgb(123, 234, 65)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="150761176074848">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="279078926311599" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set font color" sid="399971644604500" type="text_questao_resp">
+                                                                            <param id="0" name="Color">rgb(234, 0, 0)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="878503520694768">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="-3" name="Create object" sid="405604163152745" type="System">
+                                                                    <param id="0" name="Object to create">text_questao_num</param>
+                                                                    <param id="1" name="Layer">&quot;SlideLayer&quot;</param>
+                                                                    <param id="2" name="X">X+34</param>
+                                                                    <param id="3" name="Y">Y-25</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="511547225300269" type="text_questao_num">
+                                                                    <param id="0" name="Text">str(&quot;Questão: &quot;&amp;count)</param>
+                                                                </action>
+                                                                <action behavior="Pin" id="0" name="Pin to object" sid="992626353415411" type="text_questao_num">
+                                                                    <param id="0" name="Pin to">bg_pergunta_nivel_completo</param>
+                                                                    <param id="1" name="Mode">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Add to" sid="747333843148486" type="System">
+                                                                    <param id="0" name="Variable">Y</param>
+                                                                    <param id="1" name="Value">78</param>
+                                                                </action>
+                                                                <action id="-10" name="Add to" sid="891405531692603" type="System">
+                                                                    <param id="0" name="Variable">HeightAtual</param>
+                                                                    <param id="1" name="Value">78</param>
+                                                                </action>
+                                                                <action id="-10" name="Add to" sid="448130504648788" type="System">
+                                                                    <param id="0" name="Variable">count</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="932654587028290">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-24" name="Move to top" sid="375664067103762" type="mask" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="138980028194823">
                             <conditions>
@@ -215,6 +420,9 @@
                 </action>
                 <action id="0" name="Set text" sid="321798670140485" type="TextDesempenhoNivel">
                     <param id="0" name="Text">str(&quot;Você acertou &quot;&amp;quantidade_de_acertos&amp;&quot; de &quot;&amp;lenght_Perguntas&amp;&quot; questões&quot;)</param>
+                </action>
+                <action id="-6" name="Set height" sid="130216144657444" type="bg_pergunta_nivel_completo">
+                    <param id="0" name="Height">heightPerguntas</param>
                 </action>
             </actions>
         </event-block>
@@ -323,50 +531,48 @@
         <variable constant="0" name="dragIndex" sid="804925513877912" static="0" type="number">0</variable>
         <variable constant="0" name="dragMinY" sid="271152896110777" static="0" type="number">0</variable>
         <variable constant="0" name="dragMaxY" sid="227426085563673" static="0" type="number">0</variable>
-        <event-block sid="508788651243480">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="774391697388344" type="System" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="979987838896708" type="System">
-                    <param id="0" name="Variable">dragMinY</param>
-                    <param id="1" name="Value">scrollbarTrack.Y+scrollbarSlider.Height/2</param>
-                </action>
-                <action id="-9" name="Set value" sid="499532352094922" type="System">
-                    <param id="0" name="Variable">dragMaxY</param>
-                    <param id="1" name="Value">scrollbarTrack.Y+scrollbarTrack.Height-scrollbarSlider.Height/2</param>
-                </action>
-                <action id="-9" name="Set value" sid="515649152857635" type="System">
-                    <param id="0" name="Variable">dragIndex</param>
-                    <param id="1" name="Value">206.586/(dragMaxY-dragMinY)</param>
-                </action>
-                <action id="-1" name="Set X" sid="630884633162388" type="scrollbarSlider">
-                    <param id="0" name="X">scrollbarTrack.X</param>
-                </action>
-                <action id="-2" name="Set Y" sid="350473300413312" type="scrollbarSlider">
-                    <param id="0" name="Y">dragMinY</param>
-                </action>
-                <action id="-2" name="Set Y" sid="617708322471291" type="center_scroll">
-                    <param id="0" name="Y">240</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="978245400212047">
-            <conditions>
-                <condition behavior="DragDrop" id="0" name="Is dragging" sid="997925251289084" type="scrollbarSlider" />
-                <condition behavior="DragDrop" id="2" name="On drop" sid="174971162349817" type="scrollbarSlider" />
-            </conditions>
-            <actions>
-                <action id="-2" name="Set Y" sid="457828998708572" type="scrollbarSlider">
-                    <param id="0" name="Y">clamp(scrollbarSlider.Y,dragMinY,dragMaxY)</param>
-                </action>
-                <action id="-2" name="Set Y" sid="359060488719489" type="center_scroll">
-                    <param id="0" name="Y">240+(scrollbarSlider.Y-dragMinY)*dragIndex</param>
-                </action>
-                <action id="-2" name="Set Y" sid="848015808113221" type="bg_pergunta_nivel_completo">
-                    <param id="0" name="Y">204.221-(scrollbarSlider.Y-dragMinY)*dragIndex</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="568137525839245" title="Analise de desempenho">
+            <sub-events>
+                <event-block sid="508788651243480">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="774391697388344" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="979987838896708" type="System">
+                            <param id="0" name="Variable">dragMinY</param>
+                            <param id="1" name="Value">scrollbarTrack.Y+scrollbarSlider.Height/2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="499532352094922" type="System">
+                            <param id="0" name="Variable">dragMaxY</param>
+                            <param id="1" name="Value">scrollbarTrack.Y+scrollbarTrack.Height-scrollbarSlider.Height/2</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="630884633162388" type="scrollbarSlider">
+                            <param id="0" name="X">scrollbarTrack.X</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="350473300413312" type="scrollbarSlider">
+                            <param id="0" name="Y">dragMinY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="515649152857635" type="System">
+                            <param id="0" name="Variable">dragIndex</param>
+                            <param id="1" name="Value">156/(dragMaxY-dragMinY)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="978245400212047">
+                    <conditions>
+                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="997925251289084" type="scrollbarSlider" />
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="174971162349817" type="scrollbarSlider" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="457828998708572" type="scrollbarSlider">
+                            <param id="0" name="Y">clamp(scrollbarSlider.Y,dragMinY,dragMaxY)</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="848015808113221" type="bg_pergunta_nivel_completo">
+                            <param id="0" name="Y">204.221-(scrollbarSlider.Y-dragMinY)*dragIndex</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

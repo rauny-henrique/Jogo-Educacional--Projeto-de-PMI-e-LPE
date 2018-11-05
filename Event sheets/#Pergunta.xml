@@ -203,6 +203,10 @@
                             <param id="0" name="Variable">resposta</param>
                             <param id="1" name="Value">Function.Param(0)</param>
                         </action>
+                        <action id="0" name="Add key" sid="588922922154195" type="Historico_Perguntas_Respostas">
+                            <param id="0" name="Key">str(&quot;Q&quot;&amp;Perguntas_Random.At(level_progress))</param>
+                            <param id="1" name="Value">resposta</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="104322662272554">

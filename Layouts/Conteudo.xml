@@ -218,6 +218,7 @@
                 <depth>1</depth>
             </properties>
         </instance>
+        <instance type="Historico_Perguntas_Respostas" uid="131" />
     </nonworld-instances>
     <effects />
 </c2layout>
