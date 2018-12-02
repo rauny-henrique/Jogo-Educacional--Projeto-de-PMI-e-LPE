@@ -502,5 +502,20 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="920266594136310">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="641037152480672" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="622451378051185" type="System">
+                    <param id="0" name="Variable">posicaoPergunta</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="857312744413252" type="System">
+                    <param id="0" name="Variable">last_posicaoPergunta</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

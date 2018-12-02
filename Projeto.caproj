@@ -2231,6 +2231,8 @@
         </layout-folder>
         <layout-folder name="Niveis">
             <layout>Level_1.xml</layout>
+            <layout>Level_2.xml</layout>
+            <layout>Level_3.xml</layout>
         </layout-folder>
         <layout-folder name="UI">
             <layout>Pausa.xml</layout>
@@ -2257,6 +2259,8 @@
         </event-folder>
         <event-folder name="Niveis">
             <event-sheet>#Level_1.xml</event-sheet>
+            <event-sheet>#Level_2.xml</event-sheet>
+            <event-sheet>#Level_3.xml</event-sheet>
         </event-folder>
         <event-folder name="HUD">
             <event-sheet>#HUD.xml</event-sheet>

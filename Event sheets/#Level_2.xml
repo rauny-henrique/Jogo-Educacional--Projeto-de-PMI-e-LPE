@@ -1,90 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>#Level_1</name>
+    <name>#Level_2</name>
     <events>
         <include>#NivelCompleto</include>
         <include>#Pergunta</include>
         <include>#GameOver</include>
         <include>#Pausa</include>
         <include>#HUD</include>
-        <variable constant="0" name="timescale_" sid="196170930951119" static="0" type="number">1</variable>
-        <event-block sid="975589307875107">
+        <event-block sid="718015073070475">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="314245333633844" type="System" />
+                <condition id="-2" name="On start of layout" sid="315901810689987" type="System" />
             </conditions>
             <actions>
-                <action id="3" name="Clear" sid="161779454324130" type="Perguntas" />
-                <action id="3" name="Clear" sid="105744257554970" type="Historico_Perguntas_Respostas" />
-                <action id="1" name="Set size" sid="199815871039701" type="Perguntas_Random">
+                <action id="3" name="Clear" sid="357592308319679" type="Perguntas" />
+                <action id="3" name="Clear" sid="760531973079913" type="Historico_Perguntas_Respostas" />
+                <action id="1" name="Set size" sid="594313600098467" type="Perguntas_Random">
                     <param id="0" name="Width">0</param>
                     <param id="1" name="Height">1</param>
                     <param id="2" name="Depth">1</param>
                 </action>
-                <action id="0" name="Add key" sid="982722394482773" type="Perguntas">
-                    <param id="0" name="Key">&quot;Q0|Booleanos correspondem a valores true (verdadeiro) e false (falso).&quot;</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Add key" sid="693038505281839" type="Perguntas">
-                    <param id="0" name="Key">&quot;Q1|A variável a seguir pode ser considerada uma string: texto = “Eu estou com fome!”&quot;</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Add key" sid="853270393416886" type="Perguntas">
-                    <param id="0" name="Key">&quot;Q2|Variáveis do tipo inteiro aceitam valores com casas decimais.&quot;</param>
+                <action id="0" name="Add key" sid="179234827375790" type="Perguntas">
+                    <param id="0" name="Key">&quot;Q0|O valor da sequinte expressão é verdadeiro:&#x0D;&#x0A;(true == false) AND (true AND true)&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="0" name="Add key" sid="959562010847069" type="Perguntas">
-                    <param id="0" name="Key">&quot;Q3|Tanto o tipo inteiro quanto o tipo float aceitam numeros negativos.&quot;</param>
+                <action id="0" name="Add key" sid="676462916944140" type="Perguntas">
+                    <param id="0" name="Key">&quot;Q1|Para A = 5 e B = 3, é correto afirmar que: &#x0D;&#x0A;A &gt; B&#x0D;&#x0A;A != B&#x0D;&#x0A;A &gt;= B&quot;</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-9" name="Set value" sid="279159071148905" type="System">
+                <action id="0" name="Add key" sid="160519344160790" type="Perguntas">
+                    <param id="0" name="Key">&quot;Q2|Para o operador NÃO-E (NAND), se ao menos um dos dois valores for FALSO, a sentença é VERDADEIRA.&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="255748890241943" type="System">
                     <param id="0" name="Variable">lenght_Perguntas</param>
                     <param id="1" name="Value">Perguntas.KeyCount</param>
                 </action>
-                <action id="-9" name="Set value" sid="419659314015098" type="System">
+                <action id="-9" name="Set value" sid="241252383782024" type="System">
                     <param id="0" name="Variable">vida</param>
                     <param id="1" name="Value">3</param>
                 </action>
-                <action id="-9" name="Set value" sid="475700092672196" type="System">
+                <action id="-9" name="Set value" sid="774651910298109" type="System">
                     <param id="0" name="Variable">quantidade_de_acertos</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-9" name="Set value" sid="132898475329934" type="System">
+                <action id="-9" name="Set value" sid="623586648559909" type="System">
                     <param id="0" name="Variable">level_progress</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-9" name="Set value" sid="764501412900490" type="System">
+                <action id="-9" name="Set value" sid="990853996288509" type="System">
                     <param id="0" name="Variable">max_level_progress</param>
                     <param id="1" name="Value">lenght_Perguntas</param>
                 </action>
-                <action id="-9" name="Set value" sid="950792422130008" type="System">
+                <action id="-9" name="Set value" sid="544336849195351" type="System">
                     <param id="0" name="Variable">step_level_progress</param>
                     <param id="1" name="Value">max_step_level_progress / max_level_progress</param>
                 </action>
-                <action id="-13" name="Set time scale" sid="196844458825377" type="System">
+                <action id="-13" name="Set time scale" sid="331116444299554" type="System">
                     <param id="0" name="Time scale">1</param>
                 </action>
-                <action id="-9" name="Set value" sid="702708750126841" type="System">
+                <action id="-9" name="Set value" sid="291750171105948" type="System">
                     <param id="0" name="Variable">timescale_</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-9" name="Set value" sid="765461842991363" type="System">
+                <action id="-9" name="Set value" sid="239079534623909" type="System">
                     <param id="0" name="Variable">heightPerguntas</param>
                     <param id="1" name="Value">lenght_Perguntas * 78</param>
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="895046015312307">
+                <event-block sid="127770550745656">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="801431287304714" type="System">
+                        <condition id="-14" name="Compare variable" sid="763307718589427" type="System">
                             <param id="0" name="Variable">music_on</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="37" name="Unload all audio" sid="308145933475464" type="Audio" />
-                        <action id="0" name="Play" sid="203702729839563" type="Audio">
+                        <action id="37" name="Unload all audio" sid="473439648509372" type="Audio" />
+                        <action id="0" name="Play" sid="193854823297073" type="Audio">
                             <param id="0" name="Audio file">Bully OST Main Theme</param>
                             <param id="2" name="Loop">1</param>
                             <param id="3" name="Volume">0</param>
@@ -94,129 +89,129 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="265283142301687">
+        <event-block sid="351053526787926">
             <conditions>
-                <condition id="-3" name="On end of layout" sid="212119366836556" type="System" />
+                <condition id="-3" name="On end of layout" sid="464177903312669" type="System" />
             </conditions>
             <actions>
-                <action id="37" name="Unload all audio" sid="322264853511522" type="Audio" />
+                <action id="37" name="Unload all audio" sid="535628251386001" type="Audio" />
             </actions>
         </event-block>
-        <event-group description="" sid="385134422753936" title="Chefe">
+        <event-group description="" sid="442497067922974" title="Chefe2">
             <sub-events>
-                <event-block sid="789414416369032">
+                <event-block sid="781694202841809">
                     <conditions>
-                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="428973530855474" type="chefe" />
+                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="522983826038538" type="chefe" />
                     </conditions>
                     <actions>
-                        <action behavior="Pathfinding" id="0" name="Find path" sid="881967700494486" type="chefe">
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="882389252982590" type="chefe">
                             <param id="0" name="X">player.X</param>
                             <param id="1" name="Y">player.Y</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="383511862883956">
+                <event-block sid="351382543604563">
                     <conditions>
-                        <condition behavior="Pathfinding" id="0" name="On path found" sid="390300626598568" type="chefe" />
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="177164088175650" type="chefe" />
                     </conditions>
                     <actions>
-                        <action behavior="Pathfinding" id="1" name="Move along path" sid="341458007995816" type="chefe" />
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="418087021140122" type="chefe" />
                     </actions>
                 </event-block>
-                <event-block sid="652050589509047">
+                <event-block sid="585044500424250">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="883980231837997" type="System">
+                        <condition id="-6" name="Every X seconds" sid="510044793148011" type="System">
                             <param id="0" name="Interval (seconds)">0.5</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Pathfinding" id="0" name="Find path" sid="880664683917273" type="chefe">
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="531706972766043" type="chefe">
                             <param id="0" name="X">player.X</param>
                             <param id="1" name="Y">player.Y</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="628754437669719">
+                <event-block sid="280668393673696">
                     <conditions>
-                        <condition id="-41" name="Is between angles" sid="432191886269576" type="System">
+                        <condition id="-41" name="Is between angles" sid="723083044323936" type="System">
                             <param id="0" name="Angle">chefe.Pathfinding.MovingAngle</param>
                             <param id="1" name="First angle">100</param>
                             <param id="2" name="Second angle">250</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="639758586711916" type="chefe">
+                        <action id="7" name="Set mirrored" sid="920323929693558" type="chefe">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="237347397596442">
+                <event-block sid="615543364935148">
                     <conditions>
-                        <condition id="-22" name="Else" sid="797247622025506" type="System" />
+                        <condition id="-22" name="Else" sid="962705553950462" type="System" />
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="677861764009740" type="chefe">
+                        <action id="7" name="Set mirrored" sid="623293350511024" type="chefe">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="641749767896641" title="Player">
+        <event-group description="" sid="578669209045245" title="Player2">
             <sub-events>
-                <event-block sid="184063840553181">
+                <event-block sid="985131929809964">
                     <conditions>
-                        <condition behavior="8Direction" id="0" name="Is moving" sid="224044270701861" type="player" />
+                        <condition behavior="8Direction" id="0" name="Is moving" sid="567673085799687" type="player" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="623533454799542" type="player">
+                        <action id="4" name="Set animation" sid="492670993937136" type="player">
                             <param id="0" name="Animation">&quot;Correndo&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="711133750329455">
+                <event-block sid="279408637518958">
                     <conditions>
-                        <condition id="-22" name="Else" sid="583690100361936" type="System" />
+                        <condition id="-22" name="Else" sid="259972220815116" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="693441179553355" type="player">
+                        <action id="4" name="Set animation" sid="380755047367858" type="player">
                             <param id="0" name="Animation">&quot;Parado&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="913670314562249">
+                <event-block sid="770064163134457">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="333896157959715" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="577537247940044" type="Keyboard">
                             <param id="0" name="Key">37 (Left arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="257389402005943" type="player">
+                        <action id="7" name="Set mirrored" sid="330697532582595" type="player">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="408883606502760">
+                <event-block sid="969324877718463">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="362786115204223" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="152404299181058" type="Keyboard">
                             <param id="0" name="Key">39 (Right arrow)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="933511243102810" type="player">
+                        <action id="7" name="Set mirrored" sid="143967995238055" type="player">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="690775061231444" title="Condição para terminar o level">
+        <event-group description="" sid="241105198141195" title="Condição para terminar o level2">
             <sub-events>
-                <event-block sid="684711944754764">
+                <event-block sid="623763563130539">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="515178490908598" type="System">
+                        <condition id="-14" name="Compare variable" sid="641445507593851" type="System">
                             <param id="0" name="Variable">level_progress</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">0</param>
@@ -224,24 +219,24 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="204306228708319">
+                        <event-block sid="472975764754734">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="551269502685521" type="System">
+                                <condition id="-8" name="Compare two values" sid="350874347720299" type="System">
                                     <param id="0" name="First value">level_progress</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">lenght_Perguntas</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="239138590226449" type="System">
+                                <action id="-16" name="Wait" sid="779819808151517" type="System">
                                     <param id="0" name="Seconds">0.2</param>
                                 </action>
-                                <action id="0" name="Call function" sid="288389468790575" type="Function">
+                                <action id="0" name="Call function" sid="988353146149692" type="Function">
                                     <param id="0" name="Name">&quot;showNivelCompleto&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="33" name="Stop all" sid="598368117055095" type="Audio" />
-                                <action id="0" name="Play" sid="990321910013770" type="Audio">
+                                <action id="33" name="Stop all" sid="429082087992349" type="Audio" />
+                                <action id="0" name="Play" sid="161951286170713" type="Audio">
                                     <param id="0" name="Audio file">FF3_Victory_Fanfare_</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
@@ -249,39 +244,39 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="995139567572595">
+                                <event-block sid="132505383251494">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="957742145792371" type="System">
+                                        <condition id="-14" name="Compare variable" sid="121160999044763" type="System">
                                             <param id="0" name="Variable">Level</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
+                                            <param id="2" name="Value">2</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="170065431137277" type="System">
+                                        <action id="-9" name="Set value" sid="484978578010070" type="System">
                                             <param id="0" name="Variable">Level</param>
-                                            <param id="1" name="Value">2</param>
+                                            <param id="1" name="Value">3</param>
                                         </action>
-                                        <action id="0" name="Set item" sid="960193479017451" type="LocalStorage">
+                                        <action id="0" name="Set item" sid="113128339840062" type="LocalStorage">
                                             <param id="0" name="Key">&quot;level&quot;</param>
                                             <param id="1" name="Value">Level</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="769227948584672">
+                                <event-block sid="628707692542232">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="647134480606312" type="System">
+                                        <condition id="-14" name="Compare variable" sid="936125089452310" type="System">
                                             <param id="0" name="Variable">Level_module_complete</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
+                                            <param id="2" name="Value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Add to" sid="408538684545598" type="System">
+                                        <action id="-10" name="Add to" sid="885059756187216" type="System">
                                             <param id="0" name="Variable">Level_module_complete</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="0" name="Set item" sid="325761579503356" type="LocalStorage">
+                                        <action id="0" name="Set item" sid="523843665723965" type="LocalStorage">
                                             <param id="0" name="Key">&quot;level_module_complete&quot;</param>
                                             <param id="1" name="Value">Level_module_complete</param>
                                         </action>

@@ -48,17 +48,32 @@
                 <action id="-2" name="Go to layout" sid="725404200033037" type="System">
                     <param id="0" name="Layout">Menu</param>
                 </action>
-                <action id="-13" name="Set time scale" sid="613145904130127" type="System">
-                    <param id="0" name="Time scale">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="714385906631005" type="System">
-                    <param id="0" name="Variable">timescale_</param>
-                    <param id="1" name="Value">1</param>
-                </action>
                 <action id="-15" name="Set visible" sid="625448025005923" type="bg_nivel_completo">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-9" name="Set value" sid="738117207833234" type="System">
+                    <param id="0" name="Variable">level_progress</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="999652717047133">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="316750214376866" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">btn_proximo</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="657050928778621" type="btn_proximo" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="547024264914002" type="System">
+                    <param id="0" name="Layout">Niveis</param>
+                </action>
+                <action id="-15" name="Set visible" sid="854725377938205" type="bg_nivel_completo">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="979504559704752" type="System">
                     <param id="0" name="Variable">level_progress</param>
                     <param id="1" name="Value">0</param>
                 </action>
@@ -574,5 +589,40 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="236090001156065">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="493442644614367" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="988014931730861" type="System">
+                    <param id="0" name="Variable">X</param>
+                    <param id="1" name="Value">307.019</param>
+                </action>
+                <action id="-9" name="Set value" sid="112867575997287" type="System">
+                    <param id="0" name="Variable">Y</param>
+                    <param id="1" name="Value">243.562</param>
+                </action>
+                <action id="-9" name="Set value" sid="437817853328459" type="System">
+                    <param id="0" name="Variable">dragIndex</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="505889430133000" type="System">
+                    <param id="0" name="Variable">dragMinY</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="148149762501256" type="System">
+                    <param id="0" name="Variable">dragMaxY</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="966893511721413" type="System">
+                    <param id="0" name="Variable">desempenho_nivel</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="592140973105861" type="System">
+                    <param id="0" name="Variable">HeightAtual</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -14,7 +14,15 @@
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="313324958775325" type="System" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="468013901242870" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="772628515813239" type="System">
+                            <param id="0" name="Variable">timescale_</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="868749309614376">
                             <conditions>
@@ -413,6 +421,18 @@
                 <action id="0" name="Set item" sid="418200558310347" type="LocalStorage">
                     <param id="0" name="Key">&quot;level_module_complete&quot;</param>
                     <param id="1" name="Value">Level_module_complete</param>
+                </action>
+                <action id="-9" name="Set value" sid="292514493504900" type="System">
+                    <param id="0" name="Variable">show_btn_jogar</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="606799213131370" type="System">
+                    <param id="0" name="Variable">current_page</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="222290854889336" type="System">
+                    <param id="0" name="Variable">last_page</param>
+                    <param id="1" name="Value">-1</param>
                 </action>
             </actions>
         </event-block>
