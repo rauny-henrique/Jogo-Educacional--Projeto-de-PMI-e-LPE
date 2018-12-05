@@ -192,6 +192,72 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="sound" uid="113">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>765</x>
+                        <y>-84</y>
+                        <z>0</z>
+                        <width>40</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503546119</hotspotX>
+                        <hotspotY>0.507042229</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="music" uid="114">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>835</x>
+                        <y>-84</y>
+                        <z>0</z>
+                        <width>40</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503546119</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="246">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>105</x>
+                        <y>61.5</y>
+                        <z>0</z>
+                        <width>220</width>
+                        <height>137</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.5</opacity>
+                    </world>
+                </instance>
                 <instance type="Desenvolvido" uid="22">
                     <properties>
                         <text>Desenvolvido por:</text>
@@ -221,7 +287,7 @@
                 </instance>
                 <instance type="Desenvolvido" uid="23">
                     <properties>
-                        <text>Rauny Henrique Bezerra</text>
+                        <text>Rauny Henrique</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16,700,0</font>
                         <color>255,255,255</color>
@@ -275,7 +341,7 @@
                 </instance>
                 <instance type="Desenvolvido" uid="25">
                     <properties>
-                        <text>Marcus</text>
+                        <text>Marcus Vinicius</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16,700,0</font>
                         <color>255,255,255</color>
@@ -300,45 +366,34 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="sound" uid="113">
+                <instance type="Light" uid="241">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Lighten" />
+                        <effect-instance type="Brightness">
+                            <parameters>
+                                <brightness>1</brightness>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>765</x>
-                        <y>-84</y>
+                        <x>679</x>
+                        <y>80</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>316</width>
+                        <height>243</height>
                         <depth>0</depth>
-                        <hotspotX>0.503546119</hotspotX>
-                        <hotspotY>0.507042229</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="music" uid="114">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>835</x>
-                        <y>-84</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
-                        <depth>0</depth>
-                        <hotspotX>0.503546119</hotspotX>
+                        <hotspotX>0.500513852</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

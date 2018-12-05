@@ -288,5 +288,16 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="481753510790416">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="798867365434708" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="885289662459613" type="Light">
+                    <param id="0" name="X">player.X</param>
+                    <param id="1" name="Y">player.Y</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
